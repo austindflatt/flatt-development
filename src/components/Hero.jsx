@@ -122,7 +122,7 @@ export default function Hero() {
       
       <div className={classes.content}>
         {/* <Title className={classes.company}>Flatt Development</Title> */}
-        <Title className={classes.title}>Custom Product & Software Development</Title>
+        <Title className={classes.title}>Custom Software Development</Title>
         <Text className={classes.description} size="xl" mt="xl">
         Build scalable web and mobile applications with Louisville’s top Node.js, ReactJS, TypeScript, and React Native engineers.
         </Text>

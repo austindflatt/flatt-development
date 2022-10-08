@@ -9,6 +9,13 @@
 	{
 		"id": 1,
 		"image": "N/a",
+		"name": "Jerome Tardy",
+		"title": "COO",
+		"bio": "N/a"
+	},
+	{
+		"id": 2,
+		"image": "N/a",
 		"name": "Aaron Russell",
 		"title": "Full Stack JavaScript Developer",
 		"bio": "N/a"
