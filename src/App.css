@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background-color: #FFFFFF;
+	color: #000;
+    font-family: "Inter var experimental", "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.logo {
+  margin-right: 8px;
+  height: 50px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  float: left;
+  perspective: 500px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 1px 5px 64px 0 #e7e7ec;
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.content:hover {
+  box-shadow: 1px 5px 64px 0 #0909ff78;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  line-height: 300px;
   color: white;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.back {
+  background: #3451fe;
+  color: white;
+  transform: rotateY( 180deg );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.underline-big {
+  width: 100%;
+  height: 5px;
+  max-width: 450px;
+  background-color: #FFF;
+}
+
+@media screen and (max-width: 479px) {
+  .underline-big {
+    background-color: #FFF;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .underline-big {
+    width: 66%;
+  }
+}
+
+.page-header {
+  text-align: 'left';
+  color: #000;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 520px) {
+  .page-header {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+.paragraph {
+  color: #000;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.details {
+  padding: 20px;
+  text-align: left;
+}
+
+.name {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.position {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.bio {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.icon {
+  transition: all 300ms ease 0s;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 5px;
+}
+  .icon:hover {
+    transition: all 300ms ease 0s;
+    fill: #3451fe;
+  }
