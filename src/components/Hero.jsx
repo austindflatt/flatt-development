@@ -66,7 +66,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     [theme.fn.smallerThan('xs')]: {
-      fontSize: 28,
+      fontSize: 30,
       lineHeight: 1.3,
       textAlign: 'center'
     },

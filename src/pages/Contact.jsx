@@ -232,7 +232,7 @@ const Contact = () => {
         })}
         style={{ marginTop: 20, padding: '0px 20px' }}
         >
-          Send
+          Send Message
         </Button>
         </div>
         </form>
