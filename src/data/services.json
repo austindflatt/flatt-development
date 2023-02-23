@@ -1,0 +1,20 @@
+[
+	{
+		"id": 0,
+		"image": "images/pc.svg",
+		"title": "Websites",
+		"description": "We design and develop the most stunning websites that stand out on the internet"
+	},
+	{
+		"id": 1,
+		"image": "images/week.svg",
+		"title": "Apps",
+		"description": "With our high-quality development services, we can transform your app idea into a reality"
+	},
+	{
+		"id": 2,
+		"image": "images/ui.svg",
+		"title": "UI/UX",
+		"description": "With great care, we design a user interface and experience that is centered on the needs of people"
+	}
+]

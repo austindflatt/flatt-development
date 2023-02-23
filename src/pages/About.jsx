@@ -1,122 +1,99 @@
-import { 
-  Text, 
-  Container, 
-  Title, 
-  SimpleGrid, 
-  Image, 
-  createStyles 
-} from '@mantine/core';
-import image from '../blue-hero.jpg';
-import EmployeeCard from '../components/EmployeeCard';
+import React from 'react';
+import { Container, Title, Button, createStyles } from '@mantine/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
-  hero: {
-    position: 'relative',
-    backgroundImage: `url(${image})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-
-  container: {
-    height: 'calc( (var(--vh, 1vh) * 50) )',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    // paddingBottom: theme.spacing.xl * 15,
-    zIndex: 1,
-    position: 'relative',
-
-    [theme.fn.smallerThan('sm')]: {
-      height: '25vh',
-      paddingTop: theme.spacing.xl * 3,
-      paddingBottom: theme.spacing.xl * 3,
-    },
-  },
-
-  title: {
-    color: '#FFF',
-    fontSize: 56,
-    fontWeight: 700,
-    lineHeight: 1.5,
-    maxWidth: 600,
-
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: 40,
-      lineHeight: 1.5,
-      textAlign: 'left'
-    },
-
-    [theme.fn.smallerThan('xs')]: {
-      fontSize: 28,
-      lineHeight: 1.5,
-      textAlign: 'left'
-    },
-  },
-
-  content: {
-    display: 'flex',
-    flexFlow: 'column nowrap',
-    height: '100%',
-    padding: 0,
-    justifyContent: 'center',
-  },
-    
   wrapper: {
-    paddingTop: 80,
+    paddingTop: '14rem',
     paddingBottom: 80,
   },
-
+  h1: {
+    marginTop: 0,
+    marginBottom: '1.25rem',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    textAlign: 'center',
+    color: '#fff',
+    fontSize: '3.13rem',
+    lineHeight: 1.2,
+    fontWeight: 800,
+    '@media (max-width: 520px)': {
+      fontSize: 28,
+      textAlign: 'center',
+	  },
+  },
   paper: {
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#2f2f2f',
     border: '0px solid',
     borderRadius: 12,
     fontWeight: 600,
-
     [theme.fn.smallerThan('sm')]: {
     },
   },
-
+  group: {
+    padding: 24,
+  },
   serviceTitle: {
+    color: 'rgba(255, 255, 255, .87)',
     fontSize: 16,
     fontWeight: 600,
-    textAlign: 'center'
   },
-
   serviceDescription: {
-    color: 'rgba(60, 60, 60, .7)',
+    color: 'rgba(235, 235, 235, .6)',
     paddingTop: 8,
     fontSize: 14,
-    fontWeight: 300,
+    fontWeight: 500,
   },
-  control: {
-    fontWeight: 400,
-    transition: 'color .25s,border-color .25s,background-color .25s',
-
+  list: {
     [theme.fn.smallerThan('sm')]: {
-      width: '100%',
+      marginBottom: 20,
     },
   },
-
-  subHeader: {
-    color: 'rgba(60, 60, 60, .7)',
-    paddingTop: 4,
-    paddingBottom: 50,
-    fontSize: 16,
-    fontWeight: 300,
+  listItem: {
+    color: '#FFF',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontSize: '18px',
+    margin: 'auto'
+  },
+  smallHeading: {
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    color: '#ebebeb',
+    fontSize: '2rem',
+    lineHeight: '1.28125',
     textAlign: 'center',
+    marginBottom: '1.25rem',
   },
-
-  pageTitle: {
+  desc: {
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    color: '#ababab',
+    fontSize: '1.25rem',
+    lineHeight: 1.6,
+    fontWeight: 500,
+    textAlign: 'center',
+    marginBottom: '1.25rem',
+  },
+  control: {
+		paddingLeft: 50,
+		paddingRight: 50,
+		fontFamily: `Outfit, ${theme.fontFamily}`,
+		fontSize: '1.125rem',
+		fontWeight: 600,
+		transition: 'color .25s,border-color .25s,background-color .25s',
+		justifyContent: 'center',
+		alignItems: 'center',
+	
+		[theme.fn.smallerThan('md')]: {
+		  width: '100%',
+		},
+  },
+  heroTopRight: {
+    position: 'absolute',
+    left: 'auto',
+    top: 0,
+    right: 0,
+    bottom: 'auto',
     width: '100%',
-    maxWidth: '1190px',
-    marginRight: 'auto',
-    marginLeft: 'auto',
-    paddingRight: '40px',
-    paddingLeft: '40px',
+    maxWidth: '50.25rem',
   },
-
 }));
 
 const About = () => {
@@ -124,64 +101,71 @@ const About = () => {
 
   return (
     <>
-    <div className={classes.hero}>
-      <Container className={classes.container} size="xl">
+    <img 
+    src="images/glow_hero_right.svg" 
+    loading="eager" 
+    alt="" 
+    class={classes.heroTopRight}>
+    </img>
+    <Container size="md">
+      <div className={classes.wrapper}>
+        <Title className={classes.h1}>About Us</Title>
+        <div className={classes.desc}>
+          We’re fortyfour, a software company that sets itself apart from the rest. Our focus is on creating the most stunning and sophisticated software in the world. Rather than merely serving as developers, we partner with our clients to assist them in building both their software and their business.
+          <br /><br />
+          Our goal is to develop world changing software solutions for our clients while simultaneously tackling critical global issues through our internal projects. By doing so, we aim to revolutionize conventional approaches across various domains.
+        </div>
+        <div className={classes.smallHeading}>Interview process</div>
+        <div className={classes.desc}>
+          As a software company, we distinguish ourselves from the norm beginning with our interview process. We hold the belief that the conventional technical interview process fails to accurately reflect an individual's skill set. To address this issue, we utilize a 'test project' instead.
+          <br /><br />
+          During the test project, we simulate the tasks that a prospective employee would perform in their role, enabling us to make an informed assessment of their suitability. We believe in creating a simulation that closely emulates real-world scenarios, as opposed to the inadequate approach of presenting abstract 'binary search tree' problems. Given that our company's triumph is reliant on the caliber of talent we hire, we exercise extreme caution in our selection process, hiring fewer than 5% of candidates who complete our interview procedure.
+        </div>
+        <div className={classes.smallHeading}>
+          Our team
+        </div>
+        <div className={classes.desc}>
+          We operate at a rapid pace and hold all team members to exceptionally high standards. Our recruitment strategy centers on selecting extraordinary individuals who demonstrate adaptability, motivation, and exceptional communication skills.
+        </div>
+        <div className={classes.smallHeading}>
+          Startup culture always
+        </div>
+        <div className={classes.desc}>
+          Every member of our team embodies the heart and passion of a startup founder. We love the startup culture and are committed to preserving its essence, irrespective of our expansion.
+        </div>
+        <div className={classes.smallHeading}>
+          Let's work
+        </div>
+        <div className={classes.desc}>
+          If you're a passionate entrepreneur with a software project, we at fortyfour would be delighted to partner with you in creating an elegant and innovative future. Get in touch with us today, and let us begin working together towards this shared goal!
+        </div>
 
-      <div className={classes.content}>
-        <Title className={classes.title}>About Us</Title>
-        <div className="underline-big"></div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
+          <Link to="/contact" style={{ textDecoration: 'none' }}>
+            <Button
+              color="dark"
+              radius="xl"
+              size="xl"
+              className={classes.control}
+              styles={(theme) => ({
+                root: {
+                  backgroundColor: '#3444da',
+                  border: '2px solid #3444da',
+                  '&:hover': {
+                    backgroundColor: '#050505',
+                    boxShadow: '0 0 4px 0 #3444da',
+                  },
+                },
+                leftIcon: {
+                  marginRight: 15,
+                },
+              })}
+              >
+                Tell Us About Your Project
+            </Button>
+          </Link>
         </div>
-      </Container>
-    </div>
-    
-    <Container size="xl" className={classes.wrapper}>
-      <SimpleGrid
-        cols={2}
-        spacing={50}
-        breakpoints={[
-          { maxWidth: 980, cols: 1, spacing: 'md' },
-          { maxWidth: 755, cols: 1, spacing: 'sm' },
-          { maxWidth: 600, cols: 1, spacing: 'sm' },
-        ]}
-        style={{ paddingBottom: '50px', }}
-      >
-        <div>
-          <Title className="page-header">Our Mission</Title>
-          <Text className="paragraph">
-            Our mission is to build digital products that last. By being reasonable product craftsmen, 
-            we're able to avoid surprises and focus on the quality of the software we deliver.
-            <br /><br />
-            What helps us achieve it is our goal to become the no. 1 JavaScript software development company in the world by focusing on one technology, 
-            supporting the ecosystem (open source). We're eager to help technology driven companies achieve their business goals with our help. 
-            All that is possible thanks to our great team.
-          </Text>
-        </div>
-        <div>
-          <div style={{ width: 360, marginLeft: 'auto', marginRight: 'auto' }}>
-            <Image
-            radius="md"
-            src="https://tsh.io/wp-content/uploads/2021/10/story-image.png"
-            alt="Random unsplash image"
-            />
-          </div>
-        </div>
-      </SimpleGrid>
-      <Title className={classes.pageHeader}>
-        Meet the team
-      </Title>
-
-      <SimpleGrid
-        cols={4}
-        spacing="lg"
-        breakpoints={[
-          { maxWidth: 980, cols: 3, spacing: 'md' },
-          { maxWidth: 755, cols: 2, spacing: 'sm' },
-          { maxWidth: 600, cols: 1, spacing: 'sm' },
-        ]}
-        style={{ marginBottom: 50, paddingTop: 40, }}
-      >
-        <EmployeeCard />
-      </SimpleGrid>
+      </div>
     </Container>
     </>
   )

@@ -2,6 +2,7 @@ import { Title, Paper, Image, Text, createStyles } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
 import { useRef } from 'react';
+import work from '../data/work.json';
 
 const useStyles = createStyles((theme) => ({
   servicesHeader: {
@@ -16,10 +17,10 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('md')]: {
       fontSize: 28,
       textAlign: 'center',
-      marginBottom: '2.5rem',},
+      marginBottom: '2.5rem',
     },
+  },
   slide: {
-    width: '100%',
     [theme.fn.smallerThan('sm')]: {
       paddingLeft: '16px',
       paddingRight: '16px',
@@ -43,18 +44,12 @@ const useStyles = createStyles((theme) => ({
   title: {
     color: '#ebebeb',
     fontFamily: `Outfit, ${theme.fontFamily}`,
-    fontSize: '1.5rem',
+    fontSize: '2.25rem',
     fontWeight: '900',
-  },
-  title2: {
-    color: '#a9a9a9',
-    fontFamily: `Outfit, ${theme.fontFamily}`,
-    fontSize: '1.125rem',
-    fontWeight: '600',
-    lineHeight: '1.7',
+    marginBottom: '1.3rem',
   },
   description: {
-    color: '#a9a9a9',
+	  color: '#a9a9a9',
     fontFamily: `Outfit, ${theme.fontFamily}`,
     fontSize: '1.125rem',
     lineHeight: '1.7',
@@ -72,16 +67,19 @@ const useStyles = createStyles((theme) => ({
     ref: useRef('controls'),
     transition: 'opacity 150ms ease',
     backgroundColor: '#000',
+  },
+  projectDetail: {
+    alignSelf: 'center',
   }
 }));
 
-export default function Testimonials() {
+export default function RecentProjects() {
   const { classes } = useStyles();
   const mobile = useMediaQuery(`(max-width: 750px)`);
 
   return (
     <>
-    <Title className={classes.servicesHeader}>What Our Clients Have To Say</Title>
+    <Title className={classes.servicesHeader}>Our Recent Projects</Title>
     <Carousel
 	  dragFree={mobile ? false : true}
 	  withControls={mobile ? false : false}
@@ -90,7 +88,7 @@ export default function Testimonials() {
     //   getEmblaApi={setEmbla}
     skipSnaps={mobile ? false : true}
     speed={1}
-    slideSize="33.333333%"
+    slideSize="53.333333%"
     slideGap="xl"
     loop
     align="center"
@@ -105,7 +103,9 @@ export default function Testimonials() {
       }, 
     }}
     >
-      <Carousel.Slide key="1" className={classes.slide}>
+		{work.map((project, key) => {
+      return (
+      <Carousel.Slide key={key} className={classes.slide}>
         <Paper
         radius="md"
         className={classes.card}
@@ -114,22 +114,20 @@ export default function Testimonials() {
             <div>
               <Image
               radius="lg"
-              src="https://www.jpmorgan.com/content/dam/jpm/commercial-banking/bankers/generic_headshot_icon_800x800.png"
-              alt="Random unsplash image"
+              src={project.image}
+              alt={project.title}
               width="19.25rem"
               height="19.875rem"
               />
             </div>
-            <div>
-              <Title className={classes.title}>Anonymous</Title>
-              <Title className={classes.title2}>FortyFour Customer</Title>
-              <Text className={classes.description}>
-                "Austin's intelligence and vision for the company have blown us away."
-              </Text>
+            <div className={classes.projectDetail}>
+              <Title className={classes.title}>{project.title}</Title>
+              <Text className={classes.description}>{project.description}</Text>
             </div>
           </div>
         </Paper>
       </Carousel.Slide>
+    )})}
     </Carousel>
     </>
   );

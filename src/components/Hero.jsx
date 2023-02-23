@@ -1,186 +1,188 @@
-import { createStyles, Container, Title, Group, Button, Text } from '@mantine/core';
-import { Link } from "react-router-dom";
-import image from '../code3.avif'
+import React from 'react';
+import { createStyles, Container, Title, Text, Button } from '@mantine/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
-  hero: {
+  root: {
     position: 'relative',
-    backgroundImage: `linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0 0 0 / 46%) 35%, rgb(0 52 255) 100%), url(${image})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    paddingTop: '100px',
-    paddingBottom: '100px',
+    paddingTop: '13.5rem',
+    paddingBottom: '5.63rem',
+    color: '#e1e3f1',
   },
-
-  container: {
-    height: 'calc( (var(--vh, 1vh) * 50) )',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    // paddingBottom: theme.spacing.xl * 15,
-    zIndex: 1,
+  bgImages: {
+    display: 'block'
+  },
+  heroleft: {
+    left: 0,
+    top: 0,
+    right: 'auto',
+    bottom: 'auto',
+    width: '100%',
+    maxWidth: '26.75rem',
+  },
+  heroRight: {
+    left: 'auto',
+    top: 0,
+    right: 0,
+    bottom: 'auto',
+    width: '100%',
+    maxWidth: '36.88rem',
+  },
+  wrapper: {
     position: 'relative',
-
-    [theme.fn.smallerThan('sm')]: {
-      height: 500,
-      paddingBottom: theme.spacing.xl * 3,
+    maxWidth: '45rem',
+    margin: 'auto',
+  },
+  content: {
+    paddingTop: theme.spacing.xl * 2,
+    paddingBottom: theme.spacing.xl * 2,
+    marginRight: theme.spacing.xl * 3,
+    [theme.fn.smallerThan('md')]: {
+      marginRight: 0,
     },
   },
-
-  company: {
-    color: 'transparent',
-    background: '-webkit-linear-gradient( 120deg, #3451fe 30%, #47caff )',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    fontSize: 56,
-    fontWeight: 700,
-    lineHeight: 1.1,
-    maxWidth: 600,
-
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: 40,
-      lineHeight: 1.2,
-      textAlign: 'center'
-    },
-
-    [theme.fn.smallerThan('xs')]: {
-      fontSize: 28,
-      lineHeight: 1.3,
-      textAlign: 'center'
-    },
-  },
-
   title: {
-    color: '#FFF',
-    fontSize: 56,
-    fontWeight: 700,
-    lineHeight: 1.1,
-    maxWidth: 600,
-
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: 40,
+    color: '#e7e7e7',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontWeight: 800,
+    fontSize: '3.62rem',
+    lineHeight: 1.2,
+    textAlign: 'center',
+    [theme.fn.smallerThan('md')]: {
+      maxWidth: '100%',
+      fontSize: 34,
       lineHeight: 1.2,
-      textAlign: 'center'
-    },
-
-    [theme.fn.smallerThan('xs')]: {
-      fontSize: 30,
-      lineHeight: 1.3,
-      textAlign: 'center'
+      textAlign: 'center',
     },
   },
-
   description: {
-    color: '#FFF',
-    maxWidth: 600,
-
-    [theme.fn.smallerThan('sm')]: {
+    color: 'hsla(0,0%,100%,.8)',
+    fontFamily: `Outfit`,
+    fontSize: '1.25rem',
+    lineHeight: 1.4,
+    textAlign: 'center',
+    [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
-      fontSize: theme.fontSizes.sm,
-      textAlign: 'center'
-    },
-
-    [theme.fn.smallerThan('xs')]: {
-      maxWidth: '100%',
-      fontSize: theme.fontSizes.sm,
-      textAlign: 'center'
+      textAlign: 'center',
     },
   },
-
   control: {
-    fontWeight: 400,
+    paddingLeft: 50,
+    paddingRight: 50,
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontSize: '1.125rem',
+    fontWeight: 600,
     transition: 'color .25s,border-color .25s,background-color .25s',
-
-    [theme.fn.smallerThan('sm')]: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.fn.smallerThan('md')]: {
       width: '100%',
     },
   },
-
-  group: {
-    [theme.fn.smallerThan('sm')]: {
-      justifyContent: 'center',
+  scrollDown: {
+    height: '4.38rem',
+    marginTop: '2.23rem',
+    animation: 'bounce 2s infinite',
+  },
+  heroBgShape: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    bottom: 'auto',
+    zIndex: -1,
+    width: '100%',
+  },
+  labHeroRight: {
+    left: 'auto',
+    top: 0,
+    right: 0,
+    bottom: 'auto',
+    width: '100%',
+    maxWidth: '36.88rem',
+    position: 'absolute',
+  },
+  labHeroLeft: {
+    left: 0,
+    top: 0,
+    right: 'auto',
+    bottom: 'auto',
+    width: '100%',
+    maxWidth: '26.75rem',
+    position: 'absolute',
+    [theme.fn.smallerThan('md')]: {
+      display: 'none',
     },
   },
-
-  content: {
-    display: 'flex',
-    flexFlow: 'column nowrap',
-    height: '100%',
-    padding: 0,
-    justifyContent: 'center',
-  }
 }));
 
-export default function Hero() {
+function Hero() {
   const { classes } = useStyles();
 
   return (
-    <div className={classes.hero}>
-      <Container className={classes.container} size="xl">
-      
-      <div className={classes.content}>
-        {/* <Title className={classes.company}>Flatt Development</Title> */}
-        <Title className={classes.title}>Custom Software Development</Title>
-        <Text className={classes.description} size="xl" mt="xl">
-        Build scalable web and mobile applications with Louisville’s top Node.js, ReactJS, TypeScript, and React Native engineers.
-        </Text>
-
-        <Group className={classes.group} style={{ marginTop: 24 }}>
-
-        <Link to="/contact">
-        <Button 
-        radius="xl" 
-        size="md" 
-        className={classes.control}
-        styles={(theme) => ({
-          root: {
-            backgroundColor: '#3451fe',
-            borderColor: '#3475fe',
-  
-            '&:hover': {
-              backgroundColor: theme.fn.darken('#3475fe', 0.05),
-            },
-          },
-  
-          leftIcon: {
-            marginRight: 15,
-          },
-        })}
-        >
-          Start a project
-        </Button>
-        </Link>
-        
-        <Link to="/contact">
-        <Button 
-        radius="xl" 
-        size="md" 
-        className={classes.control}
-        styles={(theme) => ({
-          root: {
-            color: '#FFF',
-            backgroundColor: '#3a3a3a',
-            borderColor: '#484848',
-  
-            '&:hover': {
-              backgroundColor: theme.fn.darken('#484848', 0.05),
-            },
-          },
-  
-          leftIcon: {
-            marginRight: 15,
-          },
-        })}
-        >
-          Book a meeting
-        </Button>
-        </Link>
-
-        </Group>
-        </div>
-      </Container>
+    <>
+    <div className={classes.bgImages}>
+      <img 
+      src="images/glowtopright.svg" 
+      loading="eager" 
+      alt="" 
+      class={classes.labHeroRight}
+      />
+      <img 
+      src="images/glowtopleft.svg" 
+      loading="eager" 
+      alt="" 
+      class={classes.labHeroLeft}
+      />
     </div>
+    <Container size="xl">
+      <div className={classes.root}>
+        <div className={classes.wrapper}>
+          <Title className={classes.title}>
+            Beautifully Developed <span className="text-gradient">Websites & Apps</span>
+          </Title>
+          <Text className={classes.description} mt={30}>
+            We are your partner for product development, including design, development, quality assurance, and launching.
+          </Text>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Link to="/contact" style={{ textDecoration: 'none' }}>
+              <Button
+              color="dark"
+              radius="xl"
+              size="xl"
+              className={classes.control}
+              mt={40}
+              styles={(theme) => ({
+                root: {
+                  backgroundColor: '#3444da',
+                  border: '2px solid #3444da',
+                  '&:hover': {
+                    backgroundColor: '#050505',
+                    boxShadow: '0 0 4px 0 #3444da',
+                  },
+                },
+                leftIcon: {
+                  marginRight: 15,
+                },
+              })}
+              >
+                Tell Us About Your Project
+              </Button>
+            </Link>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img 
+            src="images/hero_arrow.svg" 
+            loading="lazy" 
+            alt="Scroll Down" 
+            className={classes.scrollDown}
+            />
+          </div>
+        </div>
+      </div>
+    </Container>
+    </>
   );
 }
+
+export default Hero;

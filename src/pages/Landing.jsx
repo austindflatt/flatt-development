@@ -1,26 +1,26 @@
-import React from 'react'
-import Hero from '../components/Hero'
-import HomeServices from '../components/Services'
-import Cases from '../components/Portfolio'
-import Partners from '../components/Clients'
-import Testimonials from '../components/Testimonials'
-import Tech from '../components/Tech'
-import GetThingsDone from '../components/GetThingsDone'
-import StartProject from '../components/StartProject'
+import React from 'react';
+import Hero from '../components/Hero';
+import HomeServices from '../components/Services';
+import Technologies from '../components/Technologies';
+import Why from '../components/WhyUs';
+import TellUs from '../components/TellUs';
+import Faqs from '../components/FAQs';
+import RecentProjects from '../components/RecentProjects';
+import Testimonials from '../components/Testimonials';
 
 const Landing = () => {
   return (
     <>
     <Hero />
-    <Partners />
     <HomeServices />
-    <Tech />
-    {/* <Cases /> */}
-    {/* <GetThingsDone /> */}
-    <Testimonials />
-    {/* <StartProject /> */}
+    <RecentProjects />
+    <Technologies />
+    <Why />
+    {/* <Testimonials /> */}
+    <Faqs />
+    <TellUs />
     </>
   )
 }
 
-export default Landing
+export default Landing;

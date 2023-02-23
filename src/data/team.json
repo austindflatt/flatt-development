@@ -3,21 +3,18 @@
 		"id": 0,
 		"image": "N/a",
 		"name": "Austin Flatt",
-		"title": "CEO",
-		"bio": "N/a"
+		"title": "CEO & Founder",
 	},
 	{
 		"id": 1,
 		"image": "N/a",
 		"name": "Jerome Tardy",
 		"title": "COO",
-		"bio": "N/a"
 	},
 	{
 		"id": 2,
 		"image": "N/a",
 		"name": "Aaron Russell",
 		"title": "CTO & Full Stack JavaScript Developer",
-		"bio": "N/a"
 	}
 ]

@@ -1,0 +1,47 @@
+[
+	{
+		"id": 0,
+		"title": "React",
+		"image": "images/tech/react.png"
+	},
+	{
+		"id": 1,
+		"title": "React Native",
+		"image": "images/tech/react-native.png"
+	},
+	{
+		"id": 2,
+		"title": "Node.js",
+		"image": "images/tech/node.png"
+	},
+	{
+		"id": 3,
+		"title": "JavaScript",
+		"image": "images/tech/javascript.png"
+	},
+	{
+		"id": 4,
+		"title": "TypeScript",
+		"image": "images/tech/typescript.png"
+	},
+	{
+		"id": 5,
+		"title": "Python",
+		"image": "images/tech/python.png"
+	},
+	{
+		"id": 6,
+		"title": "AWS",
+		"image": "images/tech/aws.png"
+	},
+	{
+		"id": 7,
+		"title": "Azure",
+		"image": "images/tech/azure.png"
+	},
+	{
+		"id": 8,
+		"title": "Figma",
+		"image": "images/tech/figma.png"
+	}
+]
