@@ -1,9 +1,16 @@
 [
 	{
-		"id": 1,
+		"id": 0,
 		"title": "HeatViz.io",
 		"description": "HeatViz.io is a real-time heat map for the top 150 cryptocurrencies.",
 		"image": "images/projects/heatviz.png",
+		"featuredProject": true
+	},
+	{
+		"id": 1,
+		"title": "Abel Lending",
+		"description": "Abel Lending is a business credit builder.",
+		"image": "images/projects/abel.png",
 		"featuredProject": true
 	}
 ]
