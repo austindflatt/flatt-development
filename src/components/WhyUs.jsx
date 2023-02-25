@@ -73,6 +73,7 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Outfit, ${theme.fontFamily}`,
     display: 'flex',
     padding: '1.5rem 2rem',
+    justifyContent: 'center',
     alignItems: 'center',
     gridColumnGap: '0.75rem',
     border: '1px solid rgba(156,175,223,.11)',
