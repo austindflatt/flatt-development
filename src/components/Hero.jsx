@@ -122,6 +122,7 @@ function Hero() {
   return (
     <>
     <div className={classes.bgImages}>
+      <div className={classes.labHeroRight} />
       <img 
       src="images/glowtopright.svg" 
       loading="eager" 
@@ -145,7 +146,7 @@ function Hero() {
             We are your partner for product development, including design, development, quality assurance, and launching.
           </Text>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Link to="/contact" style={{ textDecoration: 'none' }}>
+            <Link to="/start-project" style={{ textDecoration: 'none' }}>
               <Button
               color="dark"
               radius="xl"

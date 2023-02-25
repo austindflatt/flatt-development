@@ -101,7 +101,7 @@ export default function TellUs() {
                 <p class="cta-desc">We're excited to hear about it.</p>
               </div>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Link to="/contact" style={{ textDecoration: 'none' }}>
+                <Link to="/start-project" style={{ textDecoration: 'none' }}>
                   <Button
                   color="dark"
                   radius="xl"

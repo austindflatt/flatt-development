@@ -25,6 +25,21 @@
 		"image": "images/tech/typescript.png"
 	},
 	{
+		"id": 4,
+		"title": "GraphQL",
+		"image": "images/tech/graphql.png"
+	},
+	{
+		"id": 4,
+		"title": "Expo",
+		"image": "images/tech/expo.png"
+	},
+	{
+		"id": 4,
+		"title": "MongoDB",
+		"image": "images/tech/mongo.png"
+	},
+	{
 		"id": 5,
 		"title": "Python",
 		"image": "images/tech/python.png"

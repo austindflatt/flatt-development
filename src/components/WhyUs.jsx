@@ -132,7 +132,7 @@ export default function Why() {
     <>
     <Container size="xl">
       <div className={classes.whyWrap}>
-        <Title className={classes.h1}>Why FortyFour</Title>
+        <Title className={classes.h1}>Why Flatt Development</Title>
         <div className={classes.smallHeading}>Amazing Development, Seamless Workflow</div>
         <div className={classes.desc}>
           Our dedicated team of engineers is committed to developing with care to ensure our clients' complete satisfaction.
@@ -169,7 +169,7 @@ export default function Why() {
         </div>
         <div className={classes.glowOverlay}></div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Link to="/contact" style={{ textDecoration: 'none' }}>
+          <Link to="/start-project" style={{ textDecoration: 'none' }}>
             <Button
             color="dark"
             radius="xl"

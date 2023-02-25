@@ -23,9 +23,13 @@ const useStyles = createStyles((theme) => ({
 	item: {
 		backgroundColor: '#000',
 		color: '#FFF',
-		borderRadius: theme.radius.md,
+		borderRadius: '1.25rem',
 		border: '1px solid rgba(202,204,255,.1)',
 		overflow: 'hidden',
+    '&[data-active]': {
+      backgroundColor: 'transparent',
+      borderColor: 'rgba(202,204,255,.1)',
+    },
 	},
 	control: {
 		fontSize: theme.fontSizes.lg,
@@ -86,6 +90,8 @@ export default function Faqs() {
           style={{ 
             backgroundColor: '#000', 
             fontFamily: `Outfit`, 
+            color: 'hsla(0,0%,67.1%,.8)',
+            lineHeight: '1.75rem',
           }}>
               $5k minimum
             </Accordion.Panel>
@@ -105,7 +111,9 @@ export default function Faqs() {
           <Accordion.Panel 
           style={{ 
             backgroundColor: '#000', 
-            fontFamily: `Outfit`, 
+            fontFamily: `Outfit`,
+            color: 'hsla(0,0%,67.1%,.8)',
+            lineHeight: '1.75rem',
           }}>
             Our main HQ is in Louisville, KY but our team is all around the world and fully remote.
           </Accordion.Panel>

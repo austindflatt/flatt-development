@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Title, Button, createStyles } from '@mantine/core';
 import { Link } from 'react-router-dom';
+import Team from '../components/Team';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -111,11 +112,12 @@ const About = () => {
       <div className={classes.wrapper}>
         <Title className={classes.h1}>About Us</Title>
         <div className={classes.desc}>
-          We’re fortyfour, a software company that sets itself apart from the rest. Our focus is on creating the most stunning and sophisticated software in the world. Rather than merely serving as developers, we partner with our clients to assist them in building both their software and their business.
+          We’re Flatt Development, a software company that sets itself apart from the rest. Our focus is on creating the most stunning and sophisticated software in the world. Rather than merely serving as developers, we partner with our clients to assist them in building both their software and their business.
           <br /><br />
           Our goal is to develop world changing software solutions for our clients while simultaneously tackling critical global issues through our internal projects. By doing so, we aim to revolutionize conventional approaches across various domains.
         </div>
-        <div className={classes.smallHeading}>Interview process</div>
+        <Team />
+        {/* <div className={classes.smallHeading}>Interview process</div>
         <div className={classes.desc}>
           As a software company, we distinguish ourselves from the norm beginning with our interview process. We hold the belief that the conventional technical interview process fails to accurately reflect an individual's skill set. To address this issue, we utilize a 'test project' instead.
           <br /><br />
@@ -137,11 +139,11 @@ const About = () => {
           Let's work
         </div>
         <div className={classes.desc}>
-          If you're a passionate entrepreneur with a software project, we at fortyfour would be delighted to partner with you in creating an elegant and innovative future. Get in touch with us today, and let us begin working together towards this shared goal!
-        </div>
+          If you're a passionate entrepreneur with a software project, we at Flatt Development would be delighted to partner with you in creating an elegant and innovative future. Get in touch with us today, and let us begin working together towards this shared goal!
+        </div> */}
 
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
-          <Link to="/contact" style={{ textDecoration: 'none' }}>
+          <Link to="/start-project" style={{ textDecoration: 'none' }}>
             <Button
               color="dark"
               radius="xl"

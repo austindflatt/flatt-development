@@ -8,6 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import About from './pages/About';
+import Pricing from './pages/Pricing';
 
 function App() {
 
@@ -18,8 +19,9 @@ function App() {
         <HeaderMenu />
           <Routes>
             <Route path='/' element={<Landing />} />
-            <Route path='/contact' element={<Contact />} />
+            <Route path='/start-project' element={<Contact />} />
             <Route path='/about' element={<About />} />
+            <Route path='/pricing' element={<Pricing />} />
             <Route path='/privacy-policy' element={<Privacy />} />
             <Route path='/terms-conditions' element={<Terms />} />
           </Routes>

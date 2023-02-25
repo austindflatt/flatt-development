@@ -25,6 +25,10 @@ const useStyles = createStyles((theme) => ({
     maxWidth: '214px',
     marginBottom: '20px',
     objectFit: 'contain',
+    transition: '.25s',
+    '&:hover': {
+      opacity: .6,
+    },
     [theme.fn.smallerThan('sm')]: {
       textAlign: 'center',
       maxWidth: '100%',
@@ -122,7 +126,7 @@ export default function Footer() {
                   <img src="images/logo.png" className="logo" loading="lazy" alt="" width='214px' />
                 </Link>
               </Title>
-              <p className={classes.footerText}>fortyfour is a software development agency created in Louisville, KY.</p>
+              <p className={classes.footerText}>Flatt Development is a software development compnay created in Louisville, KY.</p>
               <div className={classes.social}>
                 <a href='https://www.facebook.com/flattdevelopment' target="_blank" rel="noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="30" height="35" viewBox="0 0 24 24" fill="#ebebebcc">
@@ -146,7 +150,7 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div style={{ alignContent: 'right' }}>
+            <div>
               <Group className={classes.links}>
                 <Link
                 className={classes.link}
@@ -171,7 +175,7 @@ export default function Footer() {
                 </Link>
               </Group>
               <p className={classes.footerCopyright}>
-                Copyrights © 2023. FORTYFOUR, LLC. All rights reserved.
+                Copyrights © 2023. Flatt Development, LLC. All rights reserved.
               </p>
             </div>
           </SimpleGrid>

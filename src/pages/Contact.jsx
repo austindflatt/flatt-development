@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Container, Button, SimpleGrid, List, Input, Select, Textarea, createStyles } from '@mantine/core';
+import { Upload } from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -55,6 +56,17 @@ const useStyles = createStyles((theme) => ({
     },
   },
   listItem: {
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    display: 'flex',
+    padding: '1.5rem 2rem',
+    alignItems: 'center',
+    gridColumnGap: '0.75rem',
+    border: '1px solid rgba(156,175,223,.11)',
+    borderRadius: '15px',
+    backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
+    fontSize: '1.25rem',
+    lineHeight: 1,
+    
     color: '#FFF',
     fontFamily: `Outfit, ${theme.fontFamily}`,
     fontSize: '18px',
@@ -146,9 +158,10 @@ const Contact = () => {
           <div>
             <form ref={form} onSubmit={sendEmail}>
               <Input
+              label="Your Name"
               placeholder="Your Name"
               styles={(theme) => ({ 
-                input: { marginBottom: 10, border: '1px solid hsla(0,0%,100%,.26)', backgroundColor: 'rgba(36,53,91,.05)', color: '#dedede', fontFamily: `Outfit, ${theme.fontFamily}`, },
+                input: { marginBottom: 10, border: '1px solid rgba(202,204,255,.1)', backgroundColor: 'rgba(36,53,91,.05)', color: '#dedede', fontFamily: `Outfit, ${theme.fontFamily}`, },
                 placeholder: { color: 'rgba(235, 235, 235, .6)' },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
                 label: {
@@ -164,7 +177,7 @@ const Contact = () => {
               <Input
               placeholder="Your Number"
               styles={(theme) => ({
-                input: { marginBottom: 10, border: '1px solid hsla(0,0%,100%,.26)', backgroundColor: 'rgba(36,53,91,.05)', color: '#dedede', fontFamily: `Outfit, ${theme.fontFamily}`, },
+                input: { marginBottom: 10, border: '1px solid rgba(202,204,255,.1)', backgroundColor: 'rgba(36,53,91,.05)', color: '#dedede', fontFamily: `Outfit, ${theme.fontFamily}`, },
                 placeholder: { color: 'rgba(235, 235, 235, .6)' },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
                 label: {
@@ -182,12 +195,12 @@ const Contact = () => {
               styles={(theme) => ({
                 input: { 
                   marginBottom: 10, 
-                  border: '1px solid hsla(0,0%,100%,.26)', 
+                  border: '1px solid rgba(202,204,255,.1)',
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
                   fontFamily: `Outfit, ${theme.fontFamily}`, 
                 },
-                placeholder: { color: 'rgba(235, 235, 235, .6)' },
+                placeholder: { color: 'rgba(235, 235, 235, .6)', },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
                 label: { 
                   marginBottom: 10,
@@ -201,15 +214,47 @@ const Contact = () => {
               />
               {/* Project info */}
               <Select
+              required
               label="What are you looking for?"
               placeholder="Project type"
               styles={(theme) => ({
+                dropdown: {
+                  backgroundColor: '#000',
+                  border: '1px solid rgba(202,204,255,.1)',
+                },
+                item: {
+                  color: '#FFF',
+                  fontFamily: `Outfit, ${theme.fontFamily}`,
+                  // applies styles to selected item
+                  '&[data-selected]': {
+                    backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
+                    border: '1px solid #3444da',
+                    marginBottom: '5px',
+                    marginTop: '5px',
+                    '&, &:hover': {
+                      backgroundColor: '#0c101b',
+                      color: '#FFF',
+                    },
+                    '&, &:focus-within': {
+                      border: '1px solid #3444da',
+                    }
+                  },
+        
+                  // applies styles to hovered item (with mouse or keyboard)
+                  '&[data-hovered]': {
+                    backgroundColor: '#0c101b',
+                  },
+                },
                 input: { 
                   marginBottom: 10, 
-                  border: '1px solid hsla(0,0%,100%,.26)', 
+                  border: '1px solid rgba(202,204,255,.1)',
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
                   fontFamily: `Outfit, ${theme.fontFamily}`, 
+                  
+                  '&[data-selected]': {
+                    border: '1px solid #3444da',
+                  },
                 },
                 placeholder: { color: 'rgba(235, 235, 235, .6)' },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
@@ -229,12 +274,41 @@ const Contact = () => {
               name="project_type"
               />
               <Select
+              variant='default'
+              required
               label="Budget range"
               placeholder="Budget range"
               styles={(theme) => ({
+                dropdown: {
+                  backgroundColor: '#000',
+                  border: '1px solid rgba(202,204,255,.1)',
+                },
+                item: {
+                  color: '#FFF',
+                  fontFamily: `Outfit, ${theme.fontFamily}`,
+                  // applies styles to selected item
+                  '&[data-selected]': {
+                    backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
+                    border: '1px solid #3444da',
+                    marginBottom: '5px',
+                    marginTop: '5px',
+                    '&, &:hover': {
+                      backgroundColor: '#0c101b',
+                      color: '#FFF',
+                    },
+                    '&, &:focus-within': {
+                      border: '1px solid #3444da',
+                    }
+                  },
+        
+                  // applies styles to hovered item (with mouse or keyboard)
+                  '&[data-hovered]': {
+                    backgroundColor: '#0c101b',
+                  },
+                },
                 input: { 
                   marginBottom: 10, 
-                  border: '1px solid hsla(0,0%,100%,.26)', 
+                  border: '1px solid rgba(202,204,255,.1)',
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
                   fontFamily: `Outfit, ${theme.fontFamily}`, 
@@ -264,7 +338,7 @@ const Contact = () => {
               styles={(theme) => ({
                 input: { 
                   marginBottom: 10, 
-                  border: '1px solid hsla(0,0%,100%,.26)', 
+                  border: '1px solid rgba(202,204,255,.1)',
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
                   fontFamily: `Outfit, ${theme.fontFamily}`, 

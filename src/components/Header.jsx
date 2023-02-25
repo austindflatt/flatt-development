@@ -45,6 +45,10 @@ const useStyles = createStyles((theme) => ({
     fontSize: 20,
     fontWeight: 600,
     lineHeight: 1.1,
+    transition: '.25s',
+    '&:hover': {
+      opacity: .6,
+    },
   },
   links: {
     [theme.fn.smallerThan('sm')]: {
@@ -135,7 +139,7 @@ export default function HeaderMenu() {
       </Link>
       
       <Group spacing={5} className={classes.links}>
-        <Link to="/contact" style={{ textDecoration: 'none' }}>
+        <Link to="/start-project" style={{ textDecoration: 'none' }}>
           <Button 
           radius="xl" 
           size="lg" 
