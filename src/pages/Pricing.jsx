@@ -111,6 +111,9 @@ const Pricing = () => {
     <Container size="md">
       <div className={classes.wrapper}>
         <Title className={classes.h1}>Transparent Pricing</Title>
+        <div className={classes.desc}>
+          We charge a flat monthly rate based on the amount of work you need. Our contract is month-to-month, so it’s easy to scale the work up or down as your needs change.
+        </div>
         
         <Paper withBorder radius="md" p="xs" key="Web Development" className={classes.paper}>
           <Group style={{ padding: '24px' }}>

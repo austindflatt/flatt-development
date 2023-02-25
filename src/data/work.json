@@ -12,12 +12,5 @@
 		"description": "Abel Lending is a business credit builder.",
 		"image": "images/projects/abel.png",
 		"featuredProject": true
-	},
-	{
-		"id": 2,
-		"title": "Abel Lending",
-		"description": "Abel Lending is a business credit builder.",
-		"image": "images/projects/abel.png",
-		"featuredProject": true
 	}
 ]
