@@ -62,7 +62,7 @@ video {
 }
 .icon:hover {
   transition: all 300ms ease 0s;
-  fill: #a9a9a9;
+  opacity: .8;
 }
 
 .text-gradient {

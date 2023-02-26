@@ -110,7 +110,7 @@ const useStyles = createStyles((theme) => ({
   },
   control: {
     fontFamily: `Outfit, ${theme.fontFamily}`,
-    fontWeight: 600,
+    fontWeight: 400,
     transition: 'color .25s,border-color .25s,background-color .25s',
   },
   down: {

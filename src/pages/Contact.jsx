@@ -62,7 +62,7 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     gridColumnGap: '0.75rem',
     border: '1px solid rgba(156,175,223,.11)',
-    borderRadius: '15px',
+    borderRadius: '10.375rem',
     backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
     fontSize: '1.25rem',
     lineHeight: 1,
@@ -161,7 +161,16 @@ const Contact = () => {
               label="Your Name"
               placeholder="Your Name"
               styles={(theme) => ({ 
-                input: { marginBottom: 10, border: '1px solid rgba(202,204,255,.1)', backgroundColor: 'rgba(36,53,91,.05)', color: '#dedede', fontFamily: `Outfit, ${theme.fontFamily}`, },
+                input: { 
+                  marginBottom: 10, 
+                  border: '1px solid rgba(202,204,255,.1)', 
+                  backgroundColor: 'rgba(36,53,91,.05)', 
+                  color: '#dedede', 
+                  fontFamily: `Outfit, ${theme.fontFamily}`,
+                  '&:hover': {
+                    backgroundColor: '#0c101b',
+                  },
+                },
                 placeholder: { color: 'rgba(235, 235, 235, .6)' },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
                 label: {
@@ -171,13 +180,22 @@ const Contact = () => {
                 },
               })}
               size="lg"
-              radius="md"
+              radius="lg"
               name="from_name"
               />
               <Input
               placeholder="Your Number"
               styles={(theme) => ({
-                input: { marginBottom: 10, border: '1px solid rgba(202,204,255,.1)', backgroundColor: 'rgba(36,53,91,.05)', color: '#dedede', fontFamily: `Outfit, ${theme.fontFamily}`, },
+                input: { 
+                  marginBottom: 10, 
+                  border: '1px solid rgba(202,204,255,.1)', 
+                  backgroundColor: 'rgba(36,53,91,.05)', 
+                  color: '#dedede', 
+                  fontFamily: `Outfit, ${theme.fontFamily}`, 
+                  '&:hover': {
+                    backgroundColor: '#0c101b',
+                  },
+                },
                 placeholder: { color: 'rgba(235, 235, 235, .6)' },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
                 label: {
@@ -187,7 +205,7 @@ const Contact = () => {
                 },
               })}
               size="lg"
-              radius="md"
+              radius="lg"
               name="number"
               />
               <Input
@@ -199,6 +217,9 @@ const Contact = () => {
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
                   fontFamily: `Outfit, ${theme.fontFamily}`, 
+                  '&:hover': {
+                    backgroundColor: '#0c101b',
+                  },
                 },
                 placeholder: { color: 'rgba(235, 235, 235, .6)', },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
@@ -209,7 +230,7 @@ const Contact = () => {
                 },
               })}
               size="lg"
-              radius="md"
+              radius="lg"
               name="email"
               />
               {/* Project info */}
@@ -233,7 +254,6 @@ const Contact = () => {
                     marginTop: '5px',
                     '&, &:hover': {
                       backgroundColor: '#0c101b',
-                      color: '#FFF',
                     },
                     '&, &:focus-within': {
                       border: '1px solid #3444da',
@@ -250,10 +270,13 @@ const Contact = () => {
                   border: '1px solid rgba(202,204,255,.1)',
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
-                  fontFamily: `Outfit, ${theme.fontFamily}`, 
-                  
+                  fontFamily: `Outfit, ${theme.fontFamily}`,
+                  '&:hover': {
+                    backgroundColor: '#0c101b',
+                  },
                   '&[data-selected]': {
                     border: '1px solid #3444da',
+                    backgroundColor: '#0c101b',
                   },
                 },
                 placeholder: { color: 'rgba(235, 235, 235, .6)' },
@@ -270,7 +293,7 @@ const Contact = () => {
                 { value: 'UI/UX', label: 'UI/UX' },
               ]}
               size="lg"
-              radius="md"
+              radius="lg"
               name="project_type"
               />
               <Select
@@ -294,7 +317,6 @@ const Contact = () => {
                     marginTop: '5px',
                     '&, &:hover': {
                       backgroundColor: '#0c101b',
-                      color: '#FFF',
                     },
                     '&, &:focus-within': {
                       border: '1px solid #3444da',
@@ -312,6 +334,9 @@ const Contact = () => {
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
                   fontFamily: `Outfit, ${theme.fontFamily}`, 
+                  '&:hover': {
+                    backgroundColor: '#0c101b',
+                  },
                 },
                 placeholder: { color: 'rgba(235, 235, 235, .6)' },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
@@ -328,7 +353,7 @@ const Contact = () => {
                 { value: 'More than $100,000', label: 'More than $100,000' },
               ]}
               size="lg"
-              radius="md"
+              radius="lg"
               name="budget"
               />
               <Textarea
@@ -341,7 +366,10 @@ const Contact = () => {
                   border: '1px solid rgba(202,204,255,.1)',
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
-                  fontFamily: `Outfit, ${theme.fontFamily}`, 
+                  fontFamily: `Outfit, ${theme.fontFamily}`,
+                  '&:hover': {
+                    backgroundColor: '#0c101b',
+                  },
                 },
                 placeholder: { color: '#585959' },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
@@ -352,7 +380,7 @@ const Contact = () => {
                 },
               })}
               size="lg"
-              radius="md"
+              radius="lg"
               minRows={4}
               name="description"
               />
