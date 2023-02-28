@@ -242,6 +242,7 @@ const Contact = () => {
                 dropdown: {
                   backgroundColor: '#000',
                   border: '1px solid rgba(202,204,255,.1)',
+                  borderRadius: '16px',
                 },
                 item: {
                   color: '#FFF',
@@ -250,10 +251,12 @@ const Contact = () => {
                   '&[data-selected]': {
                     backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
                     border: '1px solid #3444da',
+                    borderRadius: '16px',
                     marginBottom: '5px',
                     marginTop: '5px',
                     '&, &:hover': {
                       backgroundColor: '#0c101b',
+                      borderRadius: '16px',
                     },
                     '&, &:focus-within': {
                       border: '1px solid #3444da',
@@ -263,6 +266,7 @@ const Contact = () => {
                   // applies styles to hovered item (with mouse or keyboard)
                   '&[data-hovered]': {
                     backgroundColor: '#0c101b',
+                    borderRadius: '16px',
                   },
                 },
                 input: { 
@@ -309,14 +313,17 @@ const Contact = () => {
                 item: {
                   color: '#FFF',
                   fontFamily: `Outfit, ${theme.fontFamily}`,
+                  borderRadius: '16px',
                   // applies styles to selected item
                   '&[data-selected]': {
                     backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
                     border: '1px solid #3444da',
+                    borderRadius: '16px',
                     marginBottom: '5px',
                     marginTop: '5px',
                     '&, &:hover': {
                       backgroundColor: '#0c101b',
+                      borderRadius: '16px',
                     },
                     '&, &:focus-within': {
                       border: '1px solid #3444da',
@@ -326,6 +333,7 @@ const Contact = () => {
                   // applies styles to hovered item (with mouse or keyboard)
                   '&[data-hovered]': {
                     backgroundColor: '#0c101b',
+                    borderRadius: '16px',
                   },
                 },
                 input: { 
