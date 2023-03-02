@@ -126,18 +126,13 @@ const Team = () => {
     },
     {
       name: 'Aaron Russell',
-      position: 'Engineer',
+      position: 'Co-Founder & Engineer',
       image: 'images/team/aaron.png'
     },
     {
       name: 'Jerome Tardy',
       position: 'Engineer',
       image: 'images/team/jerome.png'
-    },
-    {
-      name: 'Mike Robinson',
-      position: 'Engineer & Designer',
-      image: 'images/team/mike.png'
     },
 ]
   
