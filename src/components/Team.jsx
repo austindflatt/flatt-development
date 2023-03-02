@@ -40,6 +40,9 @@ const useStyles = createStyles((theme) => ({
     marginLeft: 'auto',
     maxWidth: '150px',
   },
+  team: {
+    justifyContent: 'center',
+  },
   paper: {
     backgroundColor: '#2f2f2f',
     border: '0px solid',
@@ -139,8 +142,9 @@ const Team = () => {
   return (
 	<>
   <Title className={classes.h1}>Meet the Team</Title>
+  <div className={classes.team}>
   <SimpleGrid
-  cols={4}
+  cols={3}
   spacing="sm"
   breakpoints={[
     { maxWidth: 755, cols: 3, spacing: 'lg' },
@@ -157,6 +161,7 @@ const Team = () => {
       )
     })}
   </SimpleGrid>
+  </div>
   </>
   )
 }
