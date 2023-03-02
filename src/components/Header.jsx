@@ -2,7 +2,7 @@ import { createStyles, Header, Container, HoverCard, Center, Box, Anchor, Divide
 import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
-// import { ArrowDown, ArrowUp } from 'tabler-icons-react';
+import { ArrowDown, ArrowUp } from 'tabler-icons-react';
 
 const HEADER_HEIGHT = 75;
 
@@ -137,6 +137,24 @@ export default function HeaderMenu() {
           <img className="logo" src="images/logo.png" alt='logo' />
         </Title>
       </Link>
+      
+      {/* <Group spacing={5} className={classes.links}>
+        <HoverCard width={500} position="bottom" radius="md" shadow="md" withinPortal className={classes.dropdown}>
+          <HoverCard.Target>
+            <div className={classes.linkDropdown}>
+              <Box component="span" mr={1}>
+                Offerings 
+              </Box>
+              <div className={classes.menuIcon} aria-hidden="true"></div>
+            </div>
+          </HoverCard.Target>
+          <HoverCard.Dropdown sx={{ overflow: 'hidden', backgroundColor: '#19192c', borderRadius: '8px', border: 'none' }} >
+            <SimpleGrid cols={2} spacing={0}>
+              Software Development
+            </SimpleGrid>
+          </HoverCard.Dropdown>
+        </HoverCard>
+      </Group> */}
       
       <Group spacing={5} className={classes.links}>
         <Link to="/start-project" style={{ textDecoration: 'none' }}>

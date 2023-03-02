@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Title, SimpleGrid, Button, createStyles } from '@mantine/core';
+import { Container, Title, Text, SimpleGrid, Button, Image, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -19,6 +19,26 @@ const useStyles = createStyles((theme) => ({
       fontSize: 28,
       textAlign: 'center',
 	  },
+  },
+  name: {
+    fontSize: '1rem',
+    color: '#fff',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontWeight: 600,
+    marginTop: '1rem',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    maxWidth: '150px',
+  },
+  position: {
+    fontSize: '.85rem',
+    color: '#fff',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontWeight: 400,
+    marginTop: '.50rem',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    maxWidth: '150px',
   },
   paper: {
     backgroundColor: '#2f2f2f',
@@ -97,10 +117,51 @@ const useStyles = createStyles((theme) => ({
 
 const Team = () => {
   const { classes } = useStyles();
+
+  const teamMembers = [
+    {
+      name: 'Austin Flatt',
+      position: 'Founder, Engineer & Designer',
+      image: 'images/team/austin.png'
+    },
+    {
+      name: 'Aaron Russell',
+      position: 'Engineer',
+      image: 'images/team/aaron.png'
+    },
+    {
+      name: 'Jerome Tardy',
+      position: 'Engineer',
+      image: 'images/team/jerome.png'
+    },
+    {
+      name: 'Mike Robinson',
+      position: 'Engineer & Designer',
+      image: 'images/team/mike.png'
+    },
+]
   
   return (
 	<>
-  <Title className={classes.h1}>Our Team</Title>
+  <Title className={classes.h1}>Meet the Team</Title>
+  <SimpleGrid
+  cols={4}
+  spacing="sm"
+  breakpoints={[
+    { maxWidth: 755, cols: 3, spacing: 'lg' },
+    { maxWidth: 600, cols: 3, spacing: 'lg' },
+  ]}
+  >
+    {teamMembers.map((team, key) => {
+      return (
+        <div>
+          <Image maw={150} mx="auto" radius="md" src={team.image} alt={team.name} />
+          <Title className={classes.name}>{team.name}</Title>
+          <Text className={classes.position}>{team.position}</Text>
+        </div>
+      )
+    })}
+  </SimpleGrid>
   </>
   )
 }

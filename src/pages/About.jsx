@@ -110,9 +110,9 @@ const About = () => {
     </img>
     <Container size="md">
       <div className={classes.wrapper}>
-        <Title className={classes.h1}>About Us</Title>
+        <Title className={classes.h1}>Our philosophy is straightforward <span className="text-gradient">your application should function seamlessly</span></Title>
         <div className={classes.desc}>
-          We’re Flatt Development, a software company that sets itself apart from the rest. Our focus is on creating the most stunning and sophisticated software in the world. Rather than merely serving as developers, we partner with our clients to assist them in building both their software and their business.
+          We’re Flatt Development, a software development company that sets itself apart from the rest. Since 2021, we have been building scalable, high-quality apps for startups, established businesses and everything in between. Rather than merely serving as developers, we partner with our clients to assist them in building both their software and their business.
           <br /><br />
           Our goal is to develop world changing software solutions for our clients while simultaneously tackling critical global issues through our internal projects. By doing so, we aim to revolutionize conventional approaches across various domains.
         </div>
