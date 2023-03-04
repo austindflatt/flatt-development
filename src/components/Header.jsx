@@ -175,20 +175,20 @@ export default function HeaderMenu() {
         >
           About
         </NavLink>
-        <Link
-        className={classes.navlink}
-        activeClassName={classes.linkActive}
+        <NavLink
+        className={({ isActive }) =>
+        isActive ? `${classes.linkActive}` : `${classes.navlink}`}
         to="/pricing"
         >
           Pricing
-        </Link>
-        <Link
-        className={classes.navlink}
-        activeClassName={classes.linkActive}
+        </NavLink>
+        <NavLink
+        className={({ isActive }) =>
+        isActive ? `${classes.linkActive}` : `${classes.navlink}`}
         to="/careers"
         >
           Careers
-        </Link>
+        </NavLink>
       </Group>
       
       <Group spacing={5} className={classes.links}>
