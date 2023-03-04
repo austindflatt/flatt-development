@@ -211,7 +211,7 @@ const Pricing = () => {
         </SimpleGrid>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
-          <Link to="/contact" style={{ textDecoration: 'none' }}>
+          <Link to="/start-project" style={{ textDecoration: 'none' }}>
             <Button
               color="dark"
               radius="xl"

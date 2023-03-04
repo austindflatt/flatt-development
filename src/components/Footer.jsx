@@ -174,7 +174,7 @@ export default function Footer() {
                 >
                   Careers
                 </Link>
-                <Link
+                {/* <Link
                 className={classes.link}
                 to="/privacy-policy"
                 size="sm"
@@ -187,7 +187,7 @@ export default function Footer() {
                 size="sm"
                 >
                   Terms and Conditions
-                </Link>
+                </Link> */}
               </Group>
               <p className={classes.footerCopyright}>
                 Copyrights © 2023. Flatt Development, LLC. All rights reserved.

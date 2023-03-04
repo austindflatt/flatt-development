@@ -56,7 +56,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
   burger: {
-    backgroundColor: '#fff',
+    color: '#fff',
     [theme.fn.largerThan('sm')]: {
       display: 'none',
     },
@@ -215,6 +215,9 @@ export default function HeaderMenu() {
           </Button>
         </Link>
       </Group>
+
+      <Burger opened={opened} onClick={toggle} className={classes.burger} size="md" />
+
       </Container>
     </Header>
   );
