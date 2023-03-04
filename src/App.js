@@ -9,6 +9,8 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import About from './pages/About';
 import Pricing from './pages/Pricing';
+import NotFound from './pages/NotFound';
+import Careers from './pages/Careers';
 
 function App() {
 
@@ -22,8 +24,10 @@ function App() {
             <Route path='/start-project' element={<Contact />} />
             <Route path='/about' element={<About />} />
             <Route path='/pricing' element={<Pricing />} />
+            <Route path='/careers' element={<Careers />} />
             <Route path='/privacy-policy' element={<Privacy />} />
             <Route path='/terms-conditions' element={<Terms />} />
+            <Route path='/*' element={<NotFound />} />
           </Routes>
         <Footer />
       </ScrollToTop>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Title, Button, createStyles } from '@mantine/core';
+import { Container, Title, Text, Button, createStyles } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import Team from '../components/Team';
 
@@ -9,7 +9,7 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: 80,
   },
   h1: {
-    marginTop: 0,
+    marginTop: '2.25rem',
     marginBottom: '1.25rem',
     fontFamily: `Outfit, ${theme.fontFamily}`,
     textAlign: 'center',
@@ -21,6 +21,11 @@ const useStyles = createStyles((theme) => ({
       fontSize: 28,
       textAlign: 'center',
 	  },
+  },
+  text: {
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    textAlign: 'center',
+    color: '#ababab',
   },
   paper: {
     backgroundColor: '#2f2f2f',
@@ -95,31 +100,34 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     maxWidth: '50.25rem',
   },
+  notFound: {
+    justifyContent: 'center',
+    display: 'flex',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    maxWidth: '100%',
+    width: 150,
+  }
 }));
 
-const About = () => {
+const NotFound = () => {
   const { classes } = useStyles();
 
   return (
     <>
-    {/* <img 
-    src="images/egg-bloom-one.png" 
-    loading="eager" 
-    alt="" 
-    class={classes.heroTopRight}>
-    </img> */}
     <Container size="md">
       <div className={classes.wrapper}>
-        <Title className={classes.h1}>Our philosophy is straightforward - <span className="text-gradient">your application should function seamlessly</span></Title>
-        <div className={classes.desc}>
-          We’re Flatt Development, a software development company that sets itself apart from the rest. Since 2021, we have been building scalable, high-quality apps for startups, established businesses and everything in between. Rather than merely serving as developers, we partner with our clients to assist them in building both their software and their business.
-          <br /><br />
-          Our goal is to develop world changing software solutions for our clients while simultaneously tackling critical global issues through our internal projects. By doing so, we aim to revolutionize conventional approaches across various domains.
-        </div>
-        {/* <Team /> */}
+        <img
+        className={classes.notFound}
+        src="images/not-found.svg"
+        loading="eager" 
+        alt="" 
+        />
+        <Title className={classes.h1}>Page Not Found</Title>
+        <Text className={classes.text}>The page you are looking for doesn't exist or has been moved</Text>
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
-          <Link to="/start-project" style={{ textDecoration: 'none' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1.25rem' }}>
+          <Link to="/" style={{ textDecoration: 'none' }}>
             <Button
               color="dark"
               radius="xl"
@@ -139,7 +147,7 @@ const About = () => {
                 },
               })}
               >
-                Tell Us About Your Project
+                Go to home
             </Button>
           </Link>
         </div>
@@ -149,4 +157,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default NotFound;

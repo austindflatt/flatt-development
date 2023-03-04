@@ -72,6 +72,14 @@ video {
   -webkit-text-fill-color: transparent;
 }
 
+.price-gradient {
+  background: linear-gradient(180deg, #FFFFFF 12.67%, rgba(255, 255, 255, 0) 75.33%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.1;
+}
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);

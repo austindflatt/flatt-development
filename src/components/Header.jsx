@@ -78,12 +78,6 @@ const useStyles = createStyles((theme) => ({
       padding: theme.spacing.md,
     },
   },
-  linkActive: {
-    '&:hover': {
-      backgroundColor: '#2f2f2f',
-      color: '#3451fe',
-    },
-  },
   subLink: {
     width: '100%',
     padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
@@ -107,6 +101,26 @@ const useStyles = createStyles((theme) => ({
       backgroundColor: 'hsla(0, 0%, 100%, .07)',
       color: '#ebebeb'
     },
+  },
+  navlink: {
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    color: '#FFF',
+    textDecoration: 'none',
+    cursor: 'pointer',
+    transition: '.2s',
+    padding: '10px 15px',
+    '&:hover': {
+      opacity: '.8'
+    },
+  },
+  linkActive: {
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    color: '#ebebeb',
+    fontWeight: 700,
+    textDecoration: 'none',
+    cursor: 'pointer',
+    transition: '.2s',
+    padding: '10px 15px',
   },
   control: {
     fontFamily: `Outfit, ${theme.fontFamily}`,
@@ -138,8 +152,8 @@ export default function HeaderMenu() {
         </Title>
       </Link>
       
-      {/* <Group spacing={5} className={classes.links}>
-        <HoverCard width={500} position="bottom" radius="md" shadow="md" withinPortal className={classes.dropdown}>
+      <Group spacing={5} className={classes.links}>
+        {/* <HoverCard width={500} position="bottom" radius="md" shadow="md" withinPortal className={classes.dropdown}>
           <HoverCard.Target>
             <div className={classes.linkDropdown}>
               <Box component="span" mr={1}>
@@ -153,8 +167,29 @@ export default function HeaderMenu() {
               Software Development
             </SimpleGrid>
           </HoverCard.Dropdown>
-        </HoverCard>
-      </Group> */}
+        </HoverCard> */}
+        <NavLink
+        className={({ isActive }) =>
+        isActive ? `${classes.linkActive}` : `${classes.navlink}`}
+        to="/about"
+        >
+          About
+        </NavLink>
+        <Link
+        className={classes.navlink}
+        activeClassName={classes.linkActive}
+        to="/pricing"
+        >
+          Pricing
+        </Link>
+        <Link
+        className={classes.navlink}
+        activeClassName={classes.linkActive}
+        to="/careers"
+        >
+          Careers
+        </Link>
+      </Group>
       
       <Group spacing={5} className={classes.links}>
         <Link to="/start-project" style={{ textDecoration: 'none' }}>
@@ -176,7 +211,7 @@ export default function HeaderMenu() {
             },
           })}
           >
-            Tell us about your project
+            Start a project
           </Button>
         </Link>
       </Group>

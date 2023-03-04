@@ -134,13 +134,23 @@ const Team = () => {
       position: 'Engineer',
       image: 'images/team/jerome.png'
     },
+    {
+      name: 'Mike Robinson',
+      position: 'Engineer',
+      image: 'images/team/mike.png'
+    },
+    {
+      name: 'Jake Allan',
+      position: 'Engineer',
+      image: 'images/team/jake.png'
+    },
 ]
   
   return (
 	<>
   <Title className={classes.h1}>Meet the Team</Title>
   <SimpleGrid
-  cols={3}
+  cols={4}
   spacing="sm"
   breakpoints={[
     { maxWidth: 755, cols: 3, spacing: 'lg' },

@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import { Container, Button, SimpleGrid, List, Input, Select, Textarea, createStyles } from '@mantine/core';
 import { Upload } from 'tabler-icons-react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -96,26 +99,44 @@ const useStyles = createStyles((theme) => ({
 const Contact = () => {
   const { classes } = useStyles();
   const form = useRef();
+  const navigate = useNavigate();
+
+  const notify = () => toast.success('We’ll get back to you within 1 business day.', {
+    position: "bottom-left",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
+
+  const error = () => toast.error('There was an error.', {
+    position: "bottom-left",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
+    
 
     emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID_KEY}`, `${process.env.REACT_APP_TEMPLATE_ID_KEY}`, form.current, `${process.env.REACT_APP_PUBLIC_ID_KEY}`)
       .then((result) => {
-          console.log(result.text);
+        notify();
       }, (error) => {
-          console.log(error.text);
+        error();
       });
   };
 
   return (
     <>
-    {/* <img 
-    src="" 
-    loading="eager" 
-    alt="" 
-    class={classes.heroTopRight}>
-    </img> */}
     <Container size="xl">
       <div className={classes.wrapper}>
         <SimpleGrid
@@ -158,6 +179,7 @@ const Contact = () => {
           <div>
             <form ref={form} onSubmit={sendEmail}>
               <Input
+              required
               label="Your Name"
               placeholder="Your Name"
               styles={(theme) => ({ 
@@ -184,6 +206,8 @@ const Contact = () => {
               name="from_name"
               />
               <Input
+              required
+              label="Your Number"
               placeholder="Your Number"
               styles={(theme) => ({
                 input: { 
@@ -209,6 +233,8 @@ const Contact = () => {
               name="number"
               />
               <Input
+              required
+              label="Your Email"
               placeholder="Your Email"
               styles={(theme) => ({
                 input: { 
@@ -421,6 +447,18 @@ const Contact = () => {
         </SimpleGrid>
       </div>
     </Container>
+    <ToastContainer
+    position="bottom-left"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="dark"
+    />
     </>
   )
 }

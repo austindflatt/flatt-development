@@ -58,6 +58,7 @@ const useStyles = createStyles((theme) => ({
   },
   links: {
     [theme.fn.smallerThan('sm')]: {
+      justifyContent: 'center',
       marginTop: theme.spacing.lg,
       marginBottom: theme.spacing.lg,
       textAlign: 'center',
@@ -126,7 +127,7 @@ export default function Footer() {
                   <img src="images/logo.png" className="logo" loading="lazy" alt="" width='214px' />
                 </Link>
               </Title>
-              <p className={classes.footerText}>Flatt Development is a software development compnay created in Louisville, KY.</p>
+              <p className={classes.footerText}>Flatt Development is a software development company created in Louisville, KY.</p>
               <div className={classes.social}>
                 <a href='https://www.facebook.com/flattdevelopment' target="_blank" rel="noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon" width="30" height="35" viewBox="0 0 24 24" fill="#ebebebcc">
@@ -157,7 +158,21 @@ export default function Footer() {
                 to="/about"
                 size="sm"
                 >
-                  About Us
+                  About
+                </Link>
+                <Link
+                className={classes.link}
+                to="/pricing"
+                size="sm"
+                >
+                  Pricing
+                </Link>
+                <Link
+                className={classes.link}
+                to="/careers"
+                size="sm"
+                >
+                  Careers
                 </Link>
                 <Link
                 className={classes.link}
