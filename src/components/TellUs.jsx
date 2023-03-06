@@ -91,7 +91,7 @@ export default function TellUs() {
 
   return (
     <>
-    <Container size="xl">
+    <Container size="lg">
       <div className={classes.hireUs}>
         <div className={classes.hireUsWrapper}>
           <div className={classes.hireUsInner}>

@@ -1,27 +1,39 @@
 import React, { useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
-import { Container, Button, SimpleGrid, List, Input, Select, Textarea, Title, createStyles } from '@mantine/core';
+import { Container, Button, SimpleGrid, List, Input, Select, TextInput, Textarea, Title, createStyles } from '@mantine/core';
 import { Upload } from 'tabler-icons-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    paddingTop: 100,
+    paddingTop: '14rem',
     paddingBottom: 80,
+    position: 'relative',
   },
-  servicesHeader: {
+  h1: {
+    marginTop: 0,
+    marginBottom: '.5rem',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
     textAlign: 'center',
-    color: '#FFF',
-    fontSize: 56,
-    fontWeight: 700,
-    lineHeight: 1.1,
-    marginBottom: 40,
+    color: '#fff',
+    fontSize: '3.13rem',
+    lineHeight: 1.2,
+    fontWeight: 800,
     '@media (max-width: 520px)': {
       fontSize: 28,
       textAlign: 'center',
-    },
+	  },
+  },
+  desc: {
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    color: '#ababab',
+    fontSize: '1.25rem',
+    lineHeight: 1.6,
+    fontWeight: 500,
+    textAlign: 'center',
+    marginBottom: '1.25rem',
   },
   paper: {
     backgroundColor: '#2f2f2f',
@@ -86,7 +98,7 @@ const useStyles = createStyles((theme) => ({
   video: {
     borderRadius: '0.75rem',
     width: '100%',
-    height: '350px',
+    height: '300px',
     [theme.fn.smallerThan('sm')]: {
       height: '250px',
     },
@@ -107,6 +119,15 @@ const useStyles = createStyles((theme) => ({
     fontSize: '1.44rem',
     fontWeight: 700,
     paddingBottom: '1.25rem',
+  },
+  heroTopRight: {
+    position: 'absolute',
+    left: 'auto',
+    top: 0,
+    right: 0,
+    bottom: 'auto',
+    width: '100%',
+    maxWidth: '50.25rem',
   },
 }));
 
@@ -151,14 +172,24 @@ const Contact = () => {
 
   return (
     <>
-    <Container size="xl">
+    <img
+    src="images/glow_hero_right.svg" 
+    loading="eager" 
+    alt="" 
+    class={classes.heroTopRight}>
+    </img>
+    <Container size="lg">
       <div className={classes.wrapper}>
+        <Title className={classes.h1}>Start a project with us</Title>
+        <div className={classes.desc}>
+          We will get back to you within 1 business day!
+        </div>
         <SimpleGrid
         cols={2}
         spacing="xl"
         breakpoints={[
           { maxWidth: 980, cols: 2, spacing: 'md' },
-          { maxWidth: 755, cols: 2, spacing: 'sm' },
+          { maxWidth: 755, cols: 1, spacing: 'sm' },
           { maxWidth: 600, cols: 1, spacing: 'sm' },
         ]}
         >
@@ -193,7 +224,7 @@ const Contact = () => {
           <div className={classes.form}>
             <Title className={classes.formTitle}>Tell us about your project</Title>
             <form ref={form} onSubmit={sendEmail}>
-              <Input
+              <TextInput
               required
               label="Your name"
               placeholder="Enter your name"
@@ -210,10 +241,8 @@ const Contact = () => {
                 },
                 placeholder: { color: 'rgba(235, 235, 235, .6)' },
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
-                label: {
+                label: { 
                   marginBottom: 10,
-                  fontSize: '.88rem',
-                  fontWeight: '400',
                   color: '#FFF',
                   fontFamily: `Outfit, ${theme.fontFamily}`
                 },
@@ -222,7 +251,7 @@ const Contact = () => {
               radius="lg"
               name="from_name"
               />
-              <Input
+              <TextInput
               required
               label="Your number"
               placeholder="Enter your number"
@@ -249,7 +278,7 @@ const Contact = () => {
               radius="lg"
               name="number"
               />
-              <Input
+              <TextInput
               required
               label="Your email"
               placeholder="Enter your email"
@@ -283,7 +312,8 @@ const Contact = () => {
               placeholder="Select"
               styles={(theme) => ({
                 dropdown: {
-                  backgroundColor: '#000',
+                  backgroundColor: '#050505',
+                  backdropFilter: 'blur(24px)',
                   border: '1px solid rgba(202,204,255,.1)',
                   borderRadius: '16px',
                 },
@@ -352,11 +382,11 @@ const Contact = () => {
                 dropdown: {
                   backgroundColor: '#000',
                   border: '1px solid rgba(202,204,255,.1)',
+                  borderRadius: '16px',
                 },
                 item: {
                   color: '#FFF',
                   fontFamily: `Outfit, ${theme.fontFamily}`,
-                  borderRadius: '16px',
                   // applies styles to selected item
                   '&[data-selected]': {
                     backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
@@ -384,8 +414,12 @@ const Contact = () => {
                   border: '1px solid rgba(202,204,255,.1)',
                   backgroundColor: 'rgba(36,53,91,.05)', 
                   color: '#dedede', 
-                  fontFamily: `Outfit, ${theme.fontFamily}`, 
+                  fontFamily: `Outfit, ${theme.fontFamily}`,
                   '&:hover': {
+                    backgroundColor: '#0c101b',
+                  },
+                  '&[data-selected]': {
+                    border: '1px solid #3444da',
                     backgroundColor: '#0c101b',
                   },
                 },
@@ -393,14 +427,12 @@ const Contact = () => {
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
                 label: {
                   marginBottom: 10,
-                  // fontSize: '.88rem',
-                  // fontWeight: '400',
-                  fontFamily: `Outfit, ${theme.fontFamily}`,
                   color: '#FFF',
+                  fontFamily: `Outfit, ${theme.fontFamily}`
                 },
               })}
               data={[
-                { value: '$15k-50k', label: '$15k-50k' },
+                { value: '$16k-50k', label: '$16k-50k' },
                 { value: '$50k-200k', label: '$50k-200k' },
                 { value: '$200k-500k', label: '$200k-500k' },
                 { value: '$500k+', label: '$500k+' },

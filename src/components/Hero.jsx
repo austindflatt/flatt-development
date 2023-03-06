@@ -32,6 +32,7 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     maxWidth: '45rem',
     margin: 'auto',
+    animation: 'fadein 1s',
   },
   content: {
     paddingTop: theme.spacing.xl * 2,
@@ -101,6 +102,7 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     maxWidth: '36.88rem',
     position: 'absolute',
+    animation: 'fadein 1s',
   },
   labHeroLeft: {
     left: 0,
@@ -110,6 +112,7 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     maxWidth: '26.75rem',
     position: 'absolute',
+    animation: 'fadein 1s',
     [theme.fn.smallerThan('md')]: {
       display: 'none',
     },

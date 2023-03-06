@@ -18,6 +18,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: '3.13rem',
     lineHeight: 1.2,
     fontWeight: 800,
+    animation: 'fadein 1s',
     '@media (max-width: 520px)': {
       fontSize: 28,
       textAlign: 'center',
@@ -72,6 +73,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
     textAlign: 'center',
     marginBottom: '1.25rem',
+    animation: 'fadein 1s',
   },
   control: {
 		paddingLeft: 50,
@@ -95,6 +97,7 @@ const useStyles = createStyles((theme) => ({
     bottom: 'auto',
     width: '100%',
     maxWidth: '50.25rem',
+    animation: 'fadein 1s',
   },
 }));
 

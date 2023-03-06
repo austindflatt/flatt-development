@@ -112,7 +112,7 @@ export default function Footer() {
 
   return (
     <div className={classes.footer}>
-      <Container size="xl" className={classes.wrapper}>
+      <Container size="lg" className={classes.wrapper}>
         <div className={classes.inner}>
           <SimpleGrid 
           cols={2} 
