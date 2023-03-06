@@ -12,12 +12,5 @@
 		"description": "Abel Lending is a business credit builder.",
 		"image": "images/projects/abel.png",
 		"featuredProject": true
-	},
-	{
-		"id": 2,
-		"title": "TANDM App",
-		"description": "Tandm is an app to connect surfers through 'seshes'. We designed and developed this app in React Native and AWS.",
-		"image": "https://assets.website-files.com/63d19e83b3c58311f8a35768/63d19e83b3c5830204a35ec5_TANDM%20App%20(1).png",
-		"featuredProject": true
 	}
 ]
