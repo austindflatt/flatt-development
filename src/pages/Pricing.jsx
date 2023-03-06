@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Title, Text, SimpleGrid, Group, Paper, Button, createStyles } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import Team from '../components/Team';
+import TellUs from '../components/TellUs';
+import TrustedBy from '../components/TrustedBy';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -215,7 +217,7 @@ const Pricing = () => {
           
         </SimpleGrid>
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
+        {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
           <Link to="/start-project" style={{ textDecoration: 'none' }}>
             <Button
               color="dark"
@@ -239,9 +241,11 @@ const Pricing = () => {
                 Tell Us About Your Project
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </Container>
+    <TrustedBy />
+    <TellUs />
     </>
   )
 }

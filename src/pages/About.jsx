@@ -2,11 +2,12 @@ import React from 'react';
 import { Container, Title, Button, createStyles } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import Team from '../components/Team';
+import TellUs from '../components/TellUs';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
     paddingTop: '14rem',
-    paddingBottom: 80,
+    paddingBottom: 0,
     position: 'relative',
   },
   h1: {
@@ -122,7 +123,7 @@ const About = () => {
         </div>
         {/* <Team /> */}
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
+        {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
           <Link to="/start-project" style={{ textDecoration: 'none' }}>
             <Button
               color="dark"
@@ -146,9 +147,10 @@ const About = () => {
                 Tell Us About Your Project
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </Container>
+    <TellUs />
     </>
   )
 }
