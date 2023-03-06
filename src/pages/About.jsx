@@ -7,6 +7,7 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     paddingTop: '14rem',
     paddingBottom: 80,
+    position: 'relative',
   },
   h1: {
     marginTop: 0,
@@ -102,12 +103,12 @@ const About = () => {
 
   return (
     <>
-    {/* <img 
-    src="images/egg-bloom-one.png" 
+    <img
+    src="images/glow_hero_right.svg" 
     loading="eager" 
     alt="" 
     class={classes.heroTopRight}>
-    </img> */}
+    </img>
     <Container size="md">
       <div className={classes.wrapper}>
         <Title className={classes.h1}>Our philosophy is straightforward - <span className="text-gradient">your application should function seamlessly</span></Title>

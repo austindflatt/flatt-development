@@ -7,11 +7,14 @@ import TellUs from '../components/TellUs';
 import Faqs from '../components/FAQs';
 import RecentProjects from '../components/RecentProjects';
 import Testimonials from '../components/Testimonials';
+import TrustedBy from '../components/TrustedBy';
+import Video from '../components/Video';
 
 const Landing = () => {
   return (
     <>
     <Hero />
+    <TrustedBy />
     <HomeServices />
     <RecentProjects />
     <Technologies />

@@ -6,7 +6,7 @@ const useStyles = createStyles((theme) => ({
   root: {
     position: 'relative',
     paddingTop: '13.5rem',
-    paddingBottom: '5.63rem',
+    // paddingBottom: '5.63rem',
     color: '#e1e3f1',
   },
   bgImages: {

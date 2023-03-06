@@ -203,7 +203,9 @@ const Pricing = () => {
               </div>
               <div className={classes.detail}>
                 <Text className={classes.serviceTitle}>Monthly retainer rate</Text>
-                <Text weight={500} className={classes.serviceDescription}>For maintenance work</Text>
+                <Text weight={500} className={classes.serviceDescription}>
+                  For maintenance work. After development, we offer a 30-90 day free maintenance period (based on project size) and continue to partner with most of our clients past that free maintenance period to continue to build your software.
+                </Text>
               </div>
             </Group>
           </Paper>

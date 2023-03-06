@@ -147,6 +147,7 @@ export default function Why() {
         }}>
           <SimpleGrid
           cols={4}
+          data-aos="fade-up"
           spacing="lg"
           breakpoints={[
             { maxWidth: 1150, cols: 2, spacing: 'md' },
@@ -158,7 +159,7 @@ export default function Why() {
               return (
                 <div className={classes.whyDetailInner} key={key}>
                 <img 
-                src="images/check.svg" 
+                src="images/check-v2.svg" 
                 loading="lazy" 
                 alt={why.title}
                 class={classes.whyIcon} 
@@ -169,7 +170,7 @@ export default function Why() {
           </SimpleGrid>
         </div>
         <div className={classes.glowOverlay}></div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div data-aos="fade-up" style={{ display: 'flex', justifyContent: 'center' }}>
           <Link to="/start-project" style={{ textDecoration: 'none' }}>
             <Button
             color="dark"

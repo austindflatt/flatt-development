@@ -80,6 +80,7 @@ export default function RecentProjects() {
   return (
     <>
     <Title className={classes.servicesHeader}>Our Recent Projects</Title>
+    <div data-aos="fade-up">
     <Carousel
 	  dragFree={mobile ? false : true}
 	  withControls={mobile ? false : false}
@@ -129,6 +130,7 @@ export default function RecentProjects() {
       </Carousel.Slide>
     )})}
     </Carousel>
+    </div>
     </>
   );
 }

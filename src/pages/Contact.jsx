@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
-import { Container, Button, SimpleGrid, List, Input, Select, Textarea, createStyles } from '@mantine/core';
+import { Container, Button, SimpleGrid, List, Input, Select, Textarea, Title, createStyles } from '@mantine/core';
 import { Upload } from 'tabler-icons-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -69,7 +69,6 @@ const useStyles = createStyles((theme) => ({
     backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
     fontSize: '1.25rem',
     lineHeight: 1,
-    
     color: '#FFF',
     fontFamily: `Outfit, ${theme.fontFamily}`,
     fontSize: '18px',
@@ -85,6 +84,7 @@ const useStyles = createStyles((theme) => ({
     maxWidth: '50.25rem',
   },
   video: {
+    borderRadius: '0.75rem',
     width: '100%',
     height: '350px',
     [theme.fn.smallerThan('sm')]: {
@@ -93,7 +93,21 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('md')]: {
       height: '250px',
     },
-  }
+  },
+  form: {
+    marginBottom: 0,
+    padding: '2rem',
+    borderRadius: '0.75rem',
+    backgroundColor: 'rgba(171,179,255,.08)',
+  },
+  formTitle: {
+    marginBottom: '0.25rem',
+    color: '#ebebeb',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontSize: '1.44rem',
+    fontWeight: 700,
+    paddingBottom: '1.25rem',
+  },
 }));
 
 const Contact = () => {
@@ -151,7 +165,7 @@ const Contact = () => {
           <div>
             <iframe 
             className={classes.video} 
-            src="https://www.youtube.com/embed/h0DacXgbFo" 
+            src="https://www.youtube.com/embed/8aosxBJQVc" 
             style={{ marginBottom: 25 }} 
             title="YouTube video player" 
             frameborder="0" 
@@ -165,7 +179,7 @@ const Contact = () => {
             className={classes.list}
             icon={
             <img 
-            src="images/check.svg" 
+            src="images/check-v2.svg" 
             loading="lazy" 
             alt="" 
             style={{ width: '30px', marginRight: '5px' }} 
@@ -176,12 +190,13 @@ const Contact = () => {
               <List.Item className={classes.listItem}>You'll be meeting with our founder directly.</List.Item>
             </List>
           </div>
-          <div>
+          <div className={classes.form}>
+            <Title className={classes.formTitle}>Tell us about your project</Title>
             <form ref={form} onSubmit={sendEmail}>
               <Input
               required
-              label="Your Name"
-              placeholder="Your Name"
+              label="Your name"
+              placeholder="Enter your name"
               styles={(theme) => ({ 
                 input: { 
                   marginBottom: 10, 
@@ -197,6 +212,8 @@ const Contact = () => {
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
                 label: {
                   marginBottom: 10,
+                  fontSize: '.88rem',
+                  fontWeight: '400',
                   color: '#FFF',
                   fontFamily: `Outfit, ${theme.fontFamily}`
                 },
@@ -207,8 +224,8 @@ const Contact = () => {
               />
               <Input
               required
-              label="Your Number"
-              placeholder="Your Number"
+              label="Your number"
+              placeholder="Enter your number"
               styles={(theme) => ({
                 input: { 
                   marginBottom: 10, 
@@ -234,8 +251,8 @@ const Contact = () => {
               />
               <Input
               required
-              label="Your Email"
-              placeholder="Your Email"
+              label="Your email"
+              placeholder="Enter your email"
               styles={(theme) => ({
                 input: { 
                   marginBottom: 10, 
@@ -262,8 +279,8 @@ const Contact = () => {
               {/* Project info */}
               <Select
               required
-              label="What are you looking for?"
-              placeholder="Project type"
+              label="Project type"
+              placeholder="Select"
               styles={(theme) => ({
                 dropdown: {
                   backgroundColor: '#000',
@@ -330,7 +347,7 @@ const Contact = () => {
               variant='default'
               required
               label="Budget range"
-              placeholder="Budget range"
+              placeholder="Select"
               styles={(theme) => ({
                 dropdown: {
                   backgroundColor: '#000',
@@ -376,15 +393,17 @@ const Contact = () => {
                 inputFocus: { backgroundColor: '#42b883', border: '1px solid #3444da' },
                 label: {
                   marginBottom: 10,
+                  // fontSize: '.88rem',
+                  // fontWeight: '400',
                   fontFamily: `Outfit, ${theme.fontFamily}`,
                   color: '#FFF',
                 },
               })}
               data={[
-                { value: 'From $5,000 to $10,000', label: 'From $5,000 to $10,000' },
-                { value: 'From $10,000 to $50,000', label: 'From $10,000 to $50,000' },
-                { value: 'From $50,000 to $100,000', label: 'From $50,000 to $100,000' },
-                { value: 'More than $100,000', label: 'More than $100,000' },
+                { value: '$15k-50k', label: '$15k-50k' },
+                { value: '$50k-200k', label: '$50k-200k' },
+                { value: '$200k-500k', label: '$200k-500k' },
+                { value: '$500k+', label: '$500k+' },
               ]}
               size="lg"
               radius="lg"
@@ -392,7 +411,7 @@ const Contact = () => {
               />
               <Textarea
               label="Describe Your Project"
-              placeholder="Write here..."
+              placeholder="2-3 sentence high level summary"
               withAsterisk
               styles={(theme) => ({
                 input: { 
@@ -418,7 +437,7 @@ const Contact = () => {
               minRows={4}
               name="description"
               />
-              <div style={{ margin: 'auto', display: 'block'}}>
+              <div style={{ margin: 'auto', display: 'block', float: 'right' }}>
                 <Button 
                 type="submit"
                 radius="xl" 
