@@ -162,7 +162,8 @@ export default function Why() {
                 src="images/check-v2.svg" 
                 loading="lazy" 
                 alt={why.title}
-                class={classes.whyIcon} 
+                class={classes.whyIcon}
+                style={{ width: '30px', marginRight: '5px' }} 
                 />
                 <div>{why.title}</div>
               </div>
