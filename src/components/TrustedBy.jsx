@@ -97,6 +97,12 @@ export default function TrustedBy() {
             alt="Our Partners - Webflow" 
             class={classes.trustedByLogo}
             />
+            <img 
+            src="images/abel.png" 
+            loading="lazy" 
+            alt="Our Partners - Webflow" 
+            class={classes.trustedByLogo}
+            />
           </div>
         </div>
       </div>

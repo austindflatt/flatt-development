@@ -1,4 +1,4 @@
-import { createStyles, Header, Container, HoverCard, Center, Box, Anchor, Divider, SimpleGrid, Text, Title, Group, Burger, Paper, Transition, Button } from '@mantine/core';
+import { createStyles, Header, Container, Drawer, HoverCard, Center, Box, Anchor, Divider, SimpleGrid, Text, Title, Group, Burger, Paper, Transition, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
@@ -56,7 +56,6 @@ const useStyles = createStyles((theme) => ({
     },
   },
   burger: {
-    color: '#fff',
     [theme.fn.largerThan('sm')]: {
       display: 'none',
     },
@@ -139,7 +138,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export default function HeaderMenu() {
-  const [opened, { toggle, close }] = useDisclosure(false);
+  const [opened, { open, toggle, close }] = useDisclosure(false);
   const { classes } = useStyles();
   const [active, setActive] = useState(0);
 
@@ -216,7 +215,16 @@ export default function HeaderMenu() {
         </Link>
       </Group>
 
-      <Burger opened={opened} onClick={toggle} className={classes.burger} size="md" />
+      <Drawer
+        opened={opened}
+        onClose={close}
+        overlayProps={{ blur: 4 }}
+        position="right"
+      >
+        Mobile Nav
+      </Drawer>
+
+      <Burger opened={open} onClick={toggle} className={classes.burger} color="#FFF" size="md" />
 
       </Container>
     </Header>
