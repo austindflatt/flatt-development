@@ -58,16 +58,19 @@ const useStyles = createStyles((theme) => ({
   },
   serviceTitle: {
     marginBottom: '16px',
-    color: '#e7e7e7',
+    color: '#ebebeb',
     fontFamily: `Outfit, ${theme.fontFamily}`,
-    fontSize: '30px',
-    lineHeight: '35px',
+    fontSize: '2.5rem',
+    lineHeight: 1.2,
     fontWeight: 700,
+  },
+  secondaryText: {
+    color: '#ebebeb'
   },
   serviceDescription: {
     color: '#a9a9a9',
     fontFamily: `Outfit, ${theme.fontFamily}`,
-    fontSize: '20px',
+    fontSize: '1.5rem',
     lineHeight: '32px',
   },
   list: {
@@ -179,7 +182,7 @@ const Pricing = () => {
         
         <SimpleGrid
         cols={2}
-        style={{ gap: '1rem' , marginTop: 50}}
+        style={{ gap: '2.5rem' , marginTop: 50}}
         breakpoints={[
           { maxWidth: 980, cols: 2, spacing: 'md' },
           { maxWidth: 755, cols: 1, spacing: 'sm' },
@@ -188,28 +191,28 @@ const Pricing = () => {
         >
 
           <Paper withBorder radius="md" p="xs" key="Web Development" className={classes.paper}>
-            <Group style={{ padding: '24px' }}>
-              <div className={classes.pricing}>
+            <Group style={{ padding: '3.13rem' }}>
+              {/* <div className={classes.pricing}>
                 <Text weight={500} className={classes.priceCost}><span className='text-gradient'>$16K</span></Text>
                 <Text weight={500} className={classes.priceDuration}><span className='text-gradient'>USD, per month.</span></Text>
-              </div>
+              </div> */}
               <div className={classes.detail}>
                 <Text className={classes.serviceTitle}>Monthly flat rate</Text>
-                <Text weight={500} className={classes.serviceDescription}>For new apps and large projects</Text>
+                <Text weight={500} className={classes.serviceDescription}>We charge a fixed rate of <span className={classes.secondaryText}>$16,000/month</span> or <span className={classes.secondaryText}>$100/hour</span> for all new apps and large projects.</Text>
               </div>
             </Group>
           </Paper>
           
           <Paper withBorder radius="md" p="xs" key="Web Development" className={classes.paper}>
-            <Group style={{ padding: '24px' }}>
-              <div className={classes.pricing}>
+            <Group style={{ padding: '3.13rem' }}>
+              {/* <div className={classes.pricing}>
                 <Text weight={500} className={classes.priceCost}><span className='text-gradient'>$4K</span></Text>
                 <Text weight={500} className={classes.priceDuration}><span className='text-gradient'>USD, per month.</span></Text>
-              </div>
+              </div> */}
               <div className={classes.detail}>
-                <Text className={classes.serviceTitle}>Monthly retainer rate</Text>
+                <Text className={classes.serviceTitle}>Retainer rate</Text>
                 <Text weight={500} className={classes.serviceDescription}>
-                  For maintenance work. After development, we offer a 30-90 day free maintenance period (based on project size) and continue to partner with most of our clients past that free maintenance period to continue to build your software.
+                  Maintenance work with a fixed fee of <span className={classes.secondaryText}>$4,000/month</span>. After development, we offer a 30-90 day free maintenance period (based on project size) and continue to partner with most of our clients past that free maintenance period to continue to build your software.
                 </Text>
               </div>
             </Group>

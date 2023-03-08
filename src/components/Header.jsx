@@ -224,7 +224,7 @@ export default function HeaderMenu() {
         Mobile Nav
       </Drawer>
 
-      <Burger opened={open} onClick={toggle} className={classes.burger} color="#FFF" size="md" />
+      <Burger opened={open} onClick={null} className={classes.burger} color="#FFF" size="md" />
 
       </Container>
     </Header>

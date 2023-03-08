@@ -17,6 +17,14 @@ const useStyles = createStyles((theme) => ({
       marginBottom: '2.5rem',
 		},
   },
+  servicesWrap: {
+    display: 'flex',
+    maxWidth: '37.94rem',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    flexDirection: 'column',
+    gridRowGap: '1.5rem',
+  },
 }));
 
 export default function HomeServices() {
@@ -26,26 +34,18 @@ export default function HomeServices() {
     <>
     <Container size="xl">
       <Title className={classes.servicesHeader}>Our Services</Title>
-      <SimpleGrid
-      cols={3}
-      style={{ gap: '1rem' }}
-      breakpoints={[
-        { maxWidth: 980, cols: 3, spacing: 'md' },
-        { maxWidth: 755, cols: 1, spacing: 'sm' },
-        { maxWidth: 600, cols: 1, spacing: 'sm' },
-      ]}
-      >
-        {services.map((service, key) => {
-          return (
-            <ServiceCard 
-            key={key} 
-            title={service.title} 
-            description={service.description} 
-            image={service.image}
-            />
-          )
-        })}
-      </SimpleGrid>
+      <div className={classes.servicesWrap}>
+      {services.map((service, key) => {
+        return (
+          <ServiceCard
+          key={key} 
+          title={service.title} 
+          description={service.description} 
+          image={service.image}
+          />
+        )
+      })}
+      </div>
     </Container>
     </>
   );

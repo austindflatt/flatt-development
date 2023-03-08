@@ -5,6 +5,7 @@ import { Container, Button, SimpleGrid, List, Input, Select, TextInput, Textarea
 import { Upload } from 'tabler-icons-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import data from '../data/why.json';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -85,6 +86,38 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Outfit, ${theme.fontFamily}`,
     fontSize: '18px',
     margin: 'auto'
+  },
+  detailWrap: {
+    display: 'flex',
+    margin: '3.75rem auto 5rem',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gridColumnGap: '1rem',
+    gridRowGap: '1rem',
+    [theme.fn.smallerThan('sm')]: {
+      marginTop: '2rem',
+      marginBottom: '3rem',
+      gridColumnGap: '0.7rem',
+      gridRowGap: '0.7rem'
+    },
+  },
+  whyDetailInner: {
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    display: 'flex',
+    padding: '1.5rem 2rem',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gridColumnGap: '0.75rem',
+    border: '1px solid rgba(156,175,223,.11)',
+    borderRadius: '15px',
+    backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
+    fontSize: '1.25rem',
+    lineHeight: 1,
+    [theme.fn.smallerThan('sm')]: {
+      padding: '0.8rem 1rem',
+      gridColumnGap: '0.5rem',
+      fontSize: '.9rem',
+    },
   },
   heroTopRight: {
     position: 'absolute',
@@ -203,23 +236,29 @@ const Contact = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
             </iframe>
-            <List
-            spacing="xs"
-            size="md"
-            center
-            className={classes.list}
-            icon={
-            <img 
-            src="images/check-v2.svg" 
-            loading="lazy" 
-            alt="" 
-            style={{ width: '30px', marginRight: '5px' }} 
-            />}
+            <SimpleGrid
+            cols={2}
+            spacing="lg"
+            breakpoints={[
+              { maxWidth: 1150, cols: 2, spacing: 'md' },
+              { maxWidth: 755, cols: 2, spacing: 'sm' },
+              { maxWidth: 600, cols: 2, spacing: 'sm' },
+            ]}
             >
-              <List.Item className={classes.listItem}>We will respond to you within 24 hours.</List.Item>
-              <List.Item className={classes.listItem}>We’ll sign an NDA if requested.</List.Item>
-              <List.Item className={classes.listItem}>You'll be meeting with our founder directly.</List.Item>
-            </List>
+            {data.map((why, key) => {
+              return (
+                <div className={classes.whyDetailInner} key={key}>
+                <img 
+                src="images/check-v2.svg" 
+                loading="lazy" 
+                alt={why.title}
+                class={classes.whyIcon}
+                style={{ width: '30px', marginRight: '5px' }} 
+                />
+                <div>{why.title}</div>
+              </div>
+            )})}
+            </SimpleGrid>
           </div>
           <div className={classes.form}>
             <Title className={classes.formTitle}>Tell us about your project</Title>
@@ -365,8 +404,8 @@ const Contact = () => {
                 },
               })}
               data={[
-                { value: 'Website', label: 'Website' },
-                { value: 'App', label: 'App' },
+                { value: 'Web Development', label: 'Web Development' },
+                { value: 'Mobile Development', label: 'Mobile Development' },
                 { value: 'UI/UX', label: 'UI/UX' },
               ]}
               size="lg"

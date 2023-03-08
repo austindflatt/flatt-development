@@ -98,9 +98,21 @@ export default function TrustedBy() {
             class={classes.trustedByLogo}
             />
             <img 
+            src="images/immutablex.webp" 
+            loading="lazy" 
+            alt="Our Partners - ImmutableX" 
+            class={classes.trustedByLogo}
+            />
+            <img 
+            src="images/donotpay.png" 
+            loading="lazy" 
+            alt="Our Partners - Abel Lending" 
+            class={classes.trustedByLogo}
+            />
+            <img 
             src="images/abel.png" 
             loading="lazy" 
-            alt="Our Partners - Webflow" 
+            alt="Our Partners - Abel Lending" 
             class={classes.trustedByLogo}
             />
           </div>

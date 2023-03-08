@@ -1,20 +1,20 @@
 [
 	{
 		"id": 0,
-		"image": "images/pc.svg",
-		"title": "Websites",
-		"description": "We design and develop the most stunning websites that stand out on the internet"
+		"image": "images/web-dev.png",
+		"title": "Web Development",
+		"description": "We design and develop highly scalable platforms and well-tested products that are ready to handle millions of users daily"
 	},
 	{
 		"id": 1,
-		"image": "images/week.svg",
-		"title": "Apps",
+		"image": "images/calender.svg",
+		"title": "Mobile Development",
 		"description": "With our high-quality development services, we can transform your app idea into a reality"
 	},
 	{
 		"id": 2,
-		"image": "images/ui.svg",
+		"image": "images/uxui.png",
 		"title": "UI/UX",
-		"description": "With great care, we design a user interface and experience that is centered on the needs of people"
+		"description": "We design jaw-dropping, functional interfaces from the ground up"
 	}
 ]
