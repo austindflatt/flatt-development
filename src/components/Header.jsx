@@ -41,7 +41,8 @@ const useStyles = createStyles((theme) => ({
     height: '100%',
   },
   title: {
-    color: '#213547',
+    color: '#FFFFFF',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
     fontSize: 20,
     fontWeight: 600,
     lineHeight: 1.1,
@@ -147,7 +148,8 @@ export default function HeaderMenu() {
       <Container className={classes.header} size="xl">
       <Link to="/" style={{ textDecoration: 'none' }}>
         <Title className={classes.title}>
-          <img className="logo" src="images/logo.png" alt='logo' />
+          Flatt Development
+          {/* <img className="logo" src="images/logo.png" alt='logo' /> */}
         </Title>
       </Link>
       

@@ -109,7 +109,7 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     gridColumnGap: '0.75rem',
     border: '1px solid rgba(156,175,223,.11)',
-    borderRadius: '15px',
+    borderRadius: '12rem',
     backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
     fontSize: '1.25rem',
     lineHeight: 1,

@@ -25,6 +25,11 @@ const useStyles = createStyles((theme) => ({
     maxWidth: '214px',
     marginBottom: '20px',
     objectFit: 'contain',
+    color: '#FFFFFF',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontSize: 20,
+    fontWeight: 600,
+    lineHeight: 1.1,
     transition: '.25s',
     '&:hover': {
       opacity: .6,
@@ -124,11 +129,12 @@ export default function Footer() {
           className={classes.grid}
           >
             <div>
-              <Title className={classes.title}>
-                <Link to="/" style={{ textDecoration: 'none' }}>
-                  <img src="images/logo.png" className="logo" loading="lazy" alt="" width='214px' />
-                </Link>
-              </Title>
+              <Link to="/" style={{ textDecoration: 'none' }}>
+                <Title className={classes.title}>
+                  Flatt Development
+                  {/* <img src="images/logo.png" className="logo" loading="lazy" alt="" width='214px' /> */}
+                </Title>
+              </Link>
               {/* <p className={classes.footerText}>Flatt Development is a software development company created in Louisville, KY.</p> */}
               <div className={classes.social}>
                 <a href='https://www.facebook.com/flattdevelopment' target="_blank" rel="noreferrer">
