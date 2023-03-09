@@ -10,6 +10,11 @@
 		"image": "images/tech/react-native.png"
 	},
 	{
+		"id": 1,
+		"title": "Electron",
+		"image": "images/tech/electron.svg"
+	},
+	{
 		"id": 2,
 		"title": "Node.js",
 		"image": "images/tech/node.png"
@@ -38,11 +43,6 @@
 		"id": 4,
 		"title": "MongoDB",
 		"image": "images/tech/mongo.png"
-	},
-	{
-		"id": 5,
-		"title": "Python",
-		"image": "images/tech/python.png"
 	},
 	{
 		"id": 6,
