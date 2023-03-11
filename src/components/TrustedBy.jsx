@@ -49,6 +49,30 @@ const useStyles = createStyles((theme) => ({
     opacity: '.7',
     objectFit: 'contain',
   },
+  trustedByLogoImmutable: {
+    width: '13rem',
+    height: '3.06rem',
+    opacity: '.7',
+    objectFit: 'contain',
+  },
+  trustedByLogoWebflow: {
+    width: '8rem',
+    height: '2.5rem',
+    opacity: '.7',
+    objectFit: 'contain',
+  },
+  trustedByLogoAbel: {
+    width: '7.25rem',
+    height: '2.5rem',
+    opacity: '.7',
+    objectFit: 'contain',
+  },
+  trustedByLogoSuperTravel: {
+    width: '9.25rem',
+    height: '2.5rem',
+    opacity: '.7',
+    objectFit: 'contain',
+  },
 	heading: {
 		color: '#ababab',
     opacity: .9,
@@ -95,25 +119,25 @@ export default function TrustedBy() {
             src="images/webflow.webp" 
             loading="lazy" 
             alt="Our Partners - Webflow" 
-            class={classes.trustedByLogo}
+            class={classes.trustedByLogoWebflow}
             />
             <img 
             src="images/immutablex.webp" 
             loading="lazy" 
             alt="Our Partners - ImmutableX" 
-            class={classes.trustedByLogo}
+            class={classes.trustedByLogoImmutable}
             />
             <img 
-            src="images/donotpay.png" 
+            src="images/supertravel-logo.png" 
             loading="lazy" 
             alt="Our Partners - Abel Lending" 
-            class={classes.trustedByLogo}
+            class={classes.trustedByLogoSuperTravel}
             />
             <img 
             src="images/abel.png" 
             loading="lazy" 
             alt="Our Partners - Abel Lending" 
-            class={classes.trustedByLogo}
+            class={classes.trustedByLogoAbel}
             />
           </div>
         </div>
