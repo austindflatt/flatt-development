@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import ReactGA from 'react-ga';
 AOS.init()
 
-const TRACKING_ID = "G-4BMF2BMQDS";
+const TRACKING_ID = "UA-260531539-1";
 ReactGA.initialize(TRACKING_ID);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
