@@ -317,6 +317,7 @@ const Contact = () => {
               radius="lg"
               name="number"
               />
+
               <TextInput
               required
               label="Your email"
