@@ -8,6 +8,7 @@ AOS.init()
 
 const TRACKING_ID = "UA-260531539-1";
 ReactGA.initialize(TRACKING_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
