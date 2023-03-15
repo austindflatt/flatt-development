@@ -287,11 +287,13 @@ const Contact = () => {
               size="lg"
               radius="lg"
               name="from_name"
+              type="text"
+              pattern="^(\w\w+)\s(\w+)$"
+              title="Please enter your first and last name"
               />
               <TextInput
               required
               label="Your number"
-              placeholder="Enter your number"
               styles={(theme) => ({
                 input: { 
                   marginBottom: 10, 
@@ -315,6 +317,9 @@ const Contact = () => {
               radius="lg"
               name="number"
               type="number"
+              placeholder="888 888 8888" 
+              maxlength="10"
+              title="Please enter your 10 digit phone number"
               />
 
               <TextInput
@@ -344,6 +349,7 @@ const Contact = () => {
               radius="lg"
               name="email"
               type="email"
+              title="Please enter a valid email address"
               />
               {/* Project info */}
               <Select
