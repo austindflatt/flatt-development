@@ -101,16 +101,22 @@ const useStyles = createStyles((theme) => ({
       gridRowGap: '0.7rem'
     },
   },
+  whyUs: {
+    display: 'flex',
+    padding: '2rem',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    gridRowGap: '1.25rem',
+    border: '1px solid rgba(202,204,255,.1)',
+    borderRadius: '1.25rem',
+    backgroundColor: 'rgba(50,60,131,.16)',
+  },
   whyDetailInner: {
     fontFamily: `Outfit, ${theme.fontFamily}`,
     display: 'flex',
-    padding: '1.5rem 2rem',
     justifyContent: 'center',
     alignItems: 'center',
     gridColumnGap: '0.75rem',
-    border: '1px solid rgba(156,175,223,.11)',
-    borderRadius: '12rem',
-    backgroundImage: 'linear-gradient(180deg,rgba(50,60,131,.16),rgba(50,60,131,.16))',
     fontSize: '1.25rem',
     lineHeight: 1,
     [theme.fn.smallerThan('sm')]: {
@@ -236,15 +242,7 @@ const Contact = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
             </iframe>
-            <SimpleGrid
-            cols={2}
-            spacing="lg"
-            breakpoints={[
-              { maxWidth: 1150, cols: 2, spacing: 'md' },
-              { maxWidth: 755, cols: 2, spacing: 'sm' },
-              { maxWidth: 600, cols: 2, spacing: 'sm' },
-            ]}
-            >
+            <div className={classes.whyUs}>
             {data.map((why, key) => {
               return (
                 <div className={classes.whyDetailInner} key={key}>
@@ -258,7 +256,7 @@ const Contact = () => {
                 <div>{why.title}</div>
               </div>
             )})}
-            </SimpleGrid>
+            </div>
           </div>
           <div className={classes.form}>
             <Title className={classes.formTitle}>Tell us about your project</Title>
@@ -316,6 +314,7 @@ const Contact = () => {
               size="lg"
               radius="lg"
               name="number"
+              type="number"
               />
 
               <TextInput
@@ -344,6 +343,7 @@ const Contact = () => {
               size="lg"
               radius="lg"
               name="email"
+              type="email"
               />
               {/* Project info */}
               <Select
@@ -407,7 +407,9 @@ const Contact = () => {
               data={[
                 { value: 'Web Development', label: 'Web Development' },
                 { value: 'Mobile Development', label: 'Mobile Development' },
+                { value: 'Desktop Development', label: 'Desktop Development' },
                 { value: 'UI/UX', label: 'UI/UX' },
+                { value: 'Staff Augmentation', label: 'Staff Augmentation' },
               ]}
               size="lg"
               radius="lg"
@@ -472,7 +474,7 @@ const Contact = () => {
                 },
               })}
               data={[
-                { value: '$16k-50k', label: '$16k-50k' },
+                { value: '$12k-50k', label: '$12k-50k' },
                 { value: '$50k-200k', label: '$50k-200k' },
                 { value: '$200k-500k', label: '$200k-500k' },
                 { value: '$500k+', label: '$500k+' },

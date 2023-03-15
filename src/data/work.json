@@ -1,16 +1,30 @@
 [
 	{
 		"id": 0,
-		"title": "HeatViz.io",
-		"description": "HeatViz.io is a real-time heat map for the top 150 cryptocurrencies.",
+		"title": "HeatViz",
+		"description": "HeatViz is a real-time heat map for the top 150 cryptocurrencies, created in React.js.",
 		"image": "images/projects/heatviz.png",
 		"featuredProject": true
 	},
 	{
 		"id": 1,
 		"title": "Abel Lending",
-		"description": "Abel Lending is a business credit builder.",
+		"description": "Abel Lending is a startup focused on providing business credit building through their marketplace we developed.",
 		"image": "images/projects/abel.png",
+		"featuredProject": true
+	},
+	{
+		"id": 2,
+		"title": "Voltaic",
+		"description": "Voltaic is an app to find and list electric vehicle charging stations. We've developed the app from scratch and have also created an extremely robust admin portal to manage listings, users, transactions, and much more.",
+		"image": "images/projects/voltaic.png",
+		"featuredProject": true
+	},
+	{
+		"id": 3,
+		"title": "Mint 502",
+		"description": "Mint 502 is a consignment store in Louisville, KY. We are creating an inventory management system, a seller portal, and buyer portal for them.",
+		"image": "images/projects/mint502.png",
 		"featuredProject": true
 	}
 ]

@@ -27,11 +27,11 @@ const useStyles = createStyles((theme) => ({
     },
   },
   card: {
-    width: '100%',
+    width: '95%',
     position: 'relative',
     padding: '3rem',
-    borderRadius: '32px',
-    border: '1px solid rgba(202,204,255,.1)',
+    borderRadius: '1.875rem',
+    border: '4px solid #252d43',
     backgroundColor: 'rgba(50,60,131,.16)',
     backgroundImage: 'none',
     backgroundPosition: '0 0',
@@ -90,7 +90,7 @@ export default function RecentProjects() {
     skipSnaps={mobile ? false : true}
     speed={1}
     slideSize="53.333333%"
-    slideGap="xl"
+    slideGap="lg"
     loop
     align="center"
     slidesToScroll={mobile ? 1 : 3}

@@ -93,7 +93,7 @@ export default function Faqs() {
             color: 'hsla(0,0%,67.1%,.8)',
             lineHeight: '1.75rem',
           }}>
-              $16k minimum
+              $12k minimum
             </Accordion.Panel>
         </Accordion.Item>
 

@@ -28,6 +28,7 @@ const useStyles = createStyles((theme) => ({
     height: '100%',
     borderRadius: '1em',
     objectFit: 'cover',
+    transition: 'all .2s ease-out',
   }
 }));
 

@@ -13,8 +13,20 @@
 	},
 	{
 		"id": 2,
-		"image": "images/uxui.png",
+		"image": "images/desktop.svg",
+		"title": "Desktop Development",
+		"description": "We develop amazing lightning fast desktop cross-platform applications"
+	},
+	{
+		"id": 3,
+		"image": "images/uiux.svg",
 		"title": "UI/UX",
 		"description": "We design jaw-dropping, functional interfaces from the ground up"
+	},
+	{
+		"id": 4,
+		"image": "images/staff.svg",
+		"title": "Staff Augmentation",
+		"description": "Scale your team fast and for a temporary period with our staff augmentation service"
 	}
 ]

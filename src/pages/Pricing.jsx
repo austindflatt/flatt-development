@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Title, Text, SimpleGrid, Group, Paper, Button, createStyles } from '@mantine/core';
+import { Container, Title, Text, SimpleGrid, Group, Paper, createStyles } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import Team from '../components/Team';
 import TellUs from '../components/TellUs';
@@ -198,7 +198,7 @@ const Pricing = () => {
               </div> */}
               <div className={classes.detail}>
                 <Text className={classes.serviceTitle}>Monthly flat rate</Text>
-                <Text weight={500} className={classes.serviceDescription}>We charge a fixed rate of <span className={classes.secondaryText}>$16,000/month</span> or <span className={classes.secondaryText}>$100/hour</span> for all new apps and large projects.</Text>
+                <Text weight={500} className={classes.serviceDescription}>We charge a fixed rate of <span className={classes.secondaryText}>$12,000/month</span> or <span className={classes.secondaryText}>$75/hour</span> for all new apps and large projects.</Text>
               </div>
             </Group>
           </Paper>
@@ -212,7 +212,7 @@ const Pricing = () => {
               <div className={classes.detail}>
                 <Text className={classes.serviceTitle}>Retainer rate</Text>
                 <Text weight={500} className={classes.serviceDescription}>
-                  Maintenance work with a fixed fee of <span className={classes.secondaryText}>$4,000/month</span>. After development, we offer a 30-90 day free maintenance period (based on project size) and continue to partner with most of our clients past that free maintenance period to continue to build your software.
+                  Maintenance work with a fixed fee of <span className={classes.secondaryText}>$3,500/month</span>. After development, we offer a 1-2 month free maintenance period (based on project size).
                 </Text>
               </div>
             </Group>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Title, Text, Button, createStyles } from '@mantine/core';
 import { Link } from 'react-router-dom';
-import Team from '../components/Team';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {

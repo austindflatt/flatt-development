@@ -78,7 +78,7 @@ const useStyles = createStyles((theme) => ({
   marqueeTrack: {
     whiteSpace: 'nowrap',
     willChange: 'transform',
-    animation: 'marquee 10s linear infinite',
+    animation: 'marquee 20s linear infinite',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
@@ -119,6 +119,17 @@ export default function Technologies() {
             alt="" 
             class={classes.leftCorner}
             />
+            <div className={classes.marqueeTrack}>
+              <div className={classes.marqueeList}>
+                <div role="list" className={classes.marqueeFlex}>
+                  {tech.map((tech, key) => {
+                    return (
+                      <TechCard key={key} name={tech.title} image={tech.image} />
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
             <div className={classes.marqueeTrack}>
               <div className={classes.marqueeList}>
                 <div role="list" className={classes.marqueeFlex}>
