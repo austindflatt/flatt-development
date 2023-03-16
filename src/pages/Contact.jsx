@@ -138,6 +138,7 @@ const useStyles = createStyles((theme) => ({
     borderRadius: '0.75rem',
     width: '100%',
     height: '300px',
+    boxShadow: '0 15px 50px 0 rgb(23 25 47)',
     [theme.fn.smallerThan('sm')]: {
       height: '250px',
     },
