@@ -120,7 +120,6 @@ const useStyles = createStyles((theme) => ({
     fontSize: '1.25rem',
     lineHeight: 1,
     [theme.fn.smallerThan('sm')]: {
-      padding: '0.8rem 1rem',
       gridColumnGap: '0.5rem',
       fontSize: '.9rem',
     },
