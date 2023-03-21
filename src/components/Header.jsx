@@ -3,6 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import { ArrowDown, ArrowUp } from 'tabler-icons-react';
+import BurgerMenu from './Burger';
 
 const HEADER_HEIGHT = 75;
 
@@ -216,16 +217,9 @@ export default function HeaderMenu() {
         </Link>
       </Group>
 
-      <Drawer
-        opened={opened}
-        onClose={close}
-        overlayProps={{ blur: 4 }}
-        position="right"
-      >
-        Mobile Nav
-      </Drawer>
+      {/* <Burger opened={open} onClick={null} className={classes.burger} color="#FFF" size="md" /> */}
 
-      <Burger opened={open} onClick={null} className={classes.burger} color="#FFF" size="md" />
+      <BurgerMenu opened={open} onClick={null} className={classes.burger} color="#FFF" size="md" />
 
       </Container>
     </Header>

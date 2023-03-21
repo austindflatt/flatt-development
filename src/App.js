@@ -11,6 +11,7 @@ import About from './pages/About';
 import Pricing from './pages/Pricing';
 import NotFound from './pages/NotFound';
 import Careers from './pages/Careers';
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
 
@@ -31,6 +32,18 @@ function App() {
           </Routes>
         <Footer />
       </ScrollToTop>
+      <ToastContainer
+      position="bottom-left"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      />
     </Router>
   );
 }

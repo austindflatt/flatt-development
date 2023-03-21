@@ -175,7 +175,7 @@ const Contact = () => {
   const form = useRef();
   const navigate = useNavigate();
 
-  const notify = () => toast.success('We’ll get back to you within 1 business day.', {
+  const notify = () => toast.success('Thank you, your request has been sent!', {
     position: "bottom-left",
     autoClose: 5000,
     hideProgressBar: false,
@@ -184,6 +184,7 @@ const Contact = () => {
     draggable: true,
     progress: undefined,
     theme: "dark",
+    
   });
 
   const error = () => toast.error('There was an error.', {
@@ -199,11 +200,12 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    
-
     emailjs.sendForm(`${process.env.REACT_APP_SERVICE_ID_KEY}`, `${process.env.REACT_APP_TEMPLATE_ID_KEY}`, form.current, `${process.env.REACT_APP_PUBLIC_ID_KEY}`)
       .then((result) => {
-        notify();
+        navigate('/');
+        setTimeout(() => {
+          notify();
+        }, 1);
       }, (error) => {
         error();
       });
