@@ -480,7 +480,7 @@ const Contact = () => {
                 },
               })}
               data={[
-                { value: '$12k-50k', label: '$12k-50k' },
+                { value: '$8k-50k', label: '$12k-50k' },
                 { value: '$50k-200k', label: '$50k-200k' },
                 { value: '$200k-500k', label: '$200k-500k' },
                 { value: '$500k+', label: '$500k+' },
