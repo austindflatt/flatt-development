@@ -1,7 +1,7 @@
 [
 	{
 		"id": 0,
-		"image": "images/desktop.png",
+		"image": "images/desktop.svg",
 		"title": "Web Development",
 		"description": "We design and develop highly scalable platforms and well-tested products that are ready to handle millions of users daily"
 	},
