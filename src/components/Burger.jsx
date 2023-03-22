@@ -1,6 +1,4 @@
-import { createStyles, Header, Container, Drawer, HoverCard, Center, Box, Anchor, Divider, SimpleGrid, Text, Title, Group, Burger, Paper, Transition, Button } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { useState } from 'react';
+import { createStyles } from '@mantine/core';
 import { NavLink } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({

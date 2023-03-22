@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Title, Button, createStyles } from '@mantine/core';
+import { Container, Title, Paper, Image, Text, createStyles } from '@mantine/core';
 import { Link } from 'react-router-dom';
-import Team from '../components/Team';
+import { useRef } from 'react';
 import TellUs from '../components/TellUs';
+import work from '../data/work.json';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -100,6 +101,55 @@ const useStyles = createStyles((theme) => ({
     maxWidth: '50.25rem',
     animation: 'fadein 1s',
   },
+  marginTop: {
+    margin: '4rem',
+  },
+  card: {
+    width: '95%',
+    position: 'relative',
+    padding: '3rem',
+    borderRadius: '1.875rem',
+    border: '4px solid #252d43',
+    backgroundColor: 'rgba(50,60,131,.16)',
+    backgroundImage: 'none',
+    backgroundPosition: '0 0',
+    backgroundSize: 'auto',
+    backgroundRepeat: 'repeat',
+    backdropFilter: 'blur(70px)',
+    marginBottom: '2.5rem',
+    [theme.fn.smallerThan('sm')]: {
+    },
+  },
+  title: {
+    color: '#ebebeb',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontSize: '2.25rem',
+    fontWeight: '900',
+    marginBottom: '1.3rem',
+  },
+  description: {
+	  color: '#a9a9a9',
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontSize: '1.125rem',
+    lineHeight: '1.7',
+  },
+  grid: {
+    width: '100%',
+    display: 'grid',
+    gridAutoColumns: '1fr',
+    gridColumnGap: '2rem',
+    gridRowGap: '2rem',
+    gridTemplateRows: 'auto',
+    gridTemplateColumns: 'minmax(max-content,max-content) 1fr',
+  },
+  controls: {
+    ref: useRef('controls'),
+    transition: 'opacity 150ms ease',
+    backgroundColor: '#000',
+  },
+  projectDetail: {
+    alignSelf: 'center',
+  }
 }));
 
 const Work = () => {
@@ -113,39 +163,37 @@ const Work = () => {
     alt="" 
     class={classes.heroTopRight}>
     </img>
-    <Container size="md">
+    <Container size="lg">
       <div className={classes.wrapper}>
         <Title className={classes.h1}>Our Work</Title>
         <div className={classes.desc}>
           We develop the most beautiful designs with care and develop with extreme precision.
         </div>
-        {/* <Team /> */}
-
-        {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
-          <Link to="/start-project" style={{ textDecoration: 'none' }}>
-            <Button
-              color="dark"
-              radius="xl"
-              size="xl"
-              className={classes.control}
-              styles={(theme) => ({
-                root: {
-                  backgroundColor: '#3444da',
-                  border: '2px solid #3444da',
-                  '&:hover': {
-                    backgroundColor: '#050505',
-                    boxShadow: '0 0 4px 0 #3444da',
-                  },
-                },
-                leftIcon: {
-                  marginRight: 15,
-                },
-              })}
-              >
-                Tell Us About Your Project
-            </Button>
-          </Link>
-        </div> */}
+        <div className={classes.marginTop}>
+          {work.map((project, key) => {
+            return (
+            <Paper
+            radius="md"
+            className={classes.card}
+            >
+              <div className={classes.grid}>
+                <div>
+                  <Image
+                  radius="lg"
+                  src={project.image}
+                  alt={project.title}
+                  width="19.25rem"
+                  height="19.875rem"
+                  />
+                </div>
+                <div className={classes.projectDetail}>
+                  <Title className={classes.title}>{project.title}</Title>
+                  <Text className={classes.description}>{project.description}</Text>
+                </div>
+              </div>
+            </Paper>
+          )})}
+        </div>
       </div>
     </Container>
     <TellUs />

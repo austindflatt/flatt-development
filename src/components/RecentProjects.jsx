@@ -27,7 +27,7 @@ const useStyles = createStyles((theme) => ({
     },
   },
   card: {
-    width: '95%',
+    width: '100%',
     position: 'relative',
     padding: '3rem',
     borderRadius: '1.875rem',
