@@ -162,18 +162,25 @@ export default function Footer() {
               <Group className={classes.links}>
                 <Link
                 className={classes.link}
+                to="/work"
+                size="sm"
+                >
+                  Our Work
+                </Link>
+                <Link
+                className={classes.link}
                 to="/about"
                 size="sm"
                 >
                   About
                 </Link>
-                <Link
+                {/* <Link
                 className={classes.link}
                 to="/pricing"
                 size="sm"
                 >
                   Pricing
-                </Link>
+                </Link> */}
                 <Link
                 className={classes.link}
                 to="/careers"

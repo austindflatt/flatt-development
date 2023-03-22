@@ -1,4 +1,4 @@
-import { createStyles, Header, Container, Drawer, HoverCard, Center, Box, Anchor, Divider, SimpleGrid, Text, Title, Group, Burger, Paper, Transition, Button } from '@mantine/core';
+import { createStyles, Header, Container, Title, Group, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
@@ -125,7 +125,8 @@ const useStyles = createStyles((theme) => ({
   },
   control: {
     fontFamily: `Outfit, ${theme.fontFamily}`,
-    fontWeight: 600,
+    fontSize: '1rem',
+    fontWeight: 400,
     transition: 'color .25s,border-color .25s,background-color .25s',
   },
   down: {
@@ -183,13 +184,13 @@ export default function HeaderMenu() {
         >
           About
         </NavLink>
-        <NavLink
+        {/* <NavLink
         className={({ isActive }) =>
         isActive ? `${classes.linkActive}` : `${classes.navlink}`}
         to="/pricing"
         >
           Pricing
-        </NavLink>
+        </NavLink> */}
         <NavLink
         className={({ isActive }) =>
         isActive ? `${classes.linkActive}` : `${classes.navlink}`}

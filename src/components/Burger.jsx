@@ -75,13 +75,13 @@ const BurgerMenu = () => {
               >
                 About
               </NavLink></li>
-              <li><NavLink
+              {/* <li><NavLink
               className={({ isActive }) =>
               isActive ? `${classes.linkActive}` : `${classes.navlink}`}
               to="/pricing"
               >
                 Pricing
-              </NavLink></li>
+              </NavLink></li> */}
               <li><NavLink
               className={({ isActive }) =>
               isActive ? `${classes.linkActive}` : `${classes.navlink}`}

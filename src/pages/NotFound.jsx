@@ -81,7 +81,7 @@ const useStyles = createStyles((theme) => ({
 		paddingRight: 50,
 		fontFamily: `Outfit, ${theme.fontFamily}`,
 		fontSize: '1.125rem',
-		fontWeight: 600,
+		fontWeight: 400,
 		transition: 'color .25s,border-color .25s,background-color .25s',
 		justifyContent: 'center',
 		alignItems: 'center',

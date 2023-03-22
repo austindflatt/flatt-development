@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
-import { Container, Button, SimpleGrid, List, Input, Select, TextInput, Textarea, Title, createStyles } from '@mantine/core';
-import { Upload } from 'tabler-icons-react';
+import { Container, Button, SimpleGrid, Select, TextInput, Textarea, Title, createStyles } from '@mantine/core';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import data from '../data/why.json';
@@ -61,6 +60,7 @@ const useStyles = createStyles((theme) => ({
   control: {
     fontFamily: `Outfit, ${theme.fontFamily}`,
     fontWeight: 400,
+    fontSize: '1rem',
     transition: 'color .25s,border-color .25s,background-color .25s',
     [theme.fn.smallerThan('sm')]: {
       width: '100%',
@@ -83,8 +83,6 @@ const useStyles = createStyles((theme) => ({
     fontSize: '1.25rem',
     lineHeight: 1,
     color: '#FFF',
-    fontFamily: `Outfit, ${theme.fontFamily}`,
-    fontSize: '18px',
     margin: 'auto'
   },
   detailWrap: {
@@ -159,15 +157,6 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 700,
     paddingBottom: '1.25rem',
   },
-  heroTopRight: {
-    position: 'absolute',
-    left: 'auto',
-    top: 0,
-    right: 0,
-    bottom: 'auto',
-    width: '100%',
-    maxWidth: '50.25rem',
-  },
 }));
 
 const Contact = () => {
@@ -187,7 +176,7 @@ const Contact = () => {
     
   });
 
-  const error = () => toast.error('There was an error.', {
+  const contactError = () => toast.error('There was an error.', {
     position: "bottom-left",
     autoClose: 5000,
     hideProgressBar: false,
@@ -207,7 +196,7 @@ const Contact = () => {
           notify();
         }, 1);
       }, (error) => {
-        error();
+        contactError();
       });
   };
 
@@ -482,7 +471,8 @@ const Contact = () => {
                 },
               })}
               data={[
-                { value: '$8k-50k', label: '$8k-50k' },
+                { value: '$5k-10k', label: '$5k-10k' },
+                { value: '$10k-50k', label: '$10k-50k' },
                 { value: '$50k-200k', label: '$50k-200k' },
                 { value: '$200k-500k', label: '$200k-500k' },
                 { value: '$500k+', label: '$500k+' },

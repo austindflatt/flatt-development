@@ -8,7 +8,7 @@ import Faqs from '../components/FAQs';
 import RecentProjects from '../components/RecentProjects';
 import Testimonials from '../components/Testimonials';
 import TrustedBy from '../components/TrustedBy';
-import Video from '../components/Video';
+import Awards from '../components/Awards';
 
 const Landing = () => {
   return (
@@ -17,9 +17,10 @@ const Landing = () => {
     <TrustedBy />
     <HomeServices />
     <RecentProjects />
+    <Awards />
     <Technologies />
     <Why />
-    {/* <Testimonials /> */}
+    <Testimonials />
     <Faqs />
     <TellUs />
     </>
