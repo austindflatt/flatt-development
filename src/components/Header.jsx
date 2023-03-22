@@ -169,6 +169,13 @@ export default function HeaderMenu() {
             </SimpleGrid>
           </HoverCard.Dropdown>
         </HoverCard> */}
+         <NavLink
+        className={({ isActive }) =>
+        isActive ? `${classes.linkActive}` : `${classes.navlink}`}
+        to="/work"
+        >
+          Our Work
+        </NavLink>
         <NavLink
         className={({ isActive }) =>
         isActive ? `${classes.linkActive}` : `${classes.navlink}`}
@@ -217,10 +224,8 @@ export default function HeaderMenu() {
         </Link>
       </Group>
 
-      {/* <Burger opened={open} onClick={null} className={classes.burger} color="#FFF" size="md" /> */}
-
-      <BurgerMenu opened={open} onClick={null} className={classes.burger} color="#FFF" size="md" />
-
+      <BurgerMenu />
+      
       </Container>
     </Header>
   );

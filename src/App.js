@@ -8,6 +8,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import About from './pages/About';
+import Work from './pages/Work';
 import Pricing from './pages/Pricing';
 import NotFound from './pages/NotFound';
 import Careers from './pages/Careers';
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Landing />} />
             <Route path='/start-project' element={<Contact />} />
+            <Route path='/work' element={<Work />} />
             <Route path='/about' element={<About />} />
             <Route path='/pricing' element={<Pricing />} />
             <Route path='/careers' element={<Careers />} />
