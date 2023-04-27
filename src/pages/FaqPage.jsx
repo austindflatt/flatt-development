@@ -191,7 +191,7 @@ const FaqPage = () => {
             color: 'hsla(0,0%,67.1%,.8)',
             lineHeight: '1.75rem',
           }}>
-            Absolutely! We have partnered with companies and individuals from many countries such as Canada, Mexico, Ireland, United Kingdom, France, Thailand, Kuwait, Egypt, New Zealand, Australia, and China since 2009. Potential partners who live abroad need to be available within reasonable EST business hours, however.
+            Absolutely! We partner with companies and individuals from many countries such as Canada, Mexico, Ireland, United Kingdom, France, Thailand, Kuwait, Egypt, New Zealand, Australia, and China. Potential partners who live abroad need to be available within reasonable EST business hours, however.
           </Accordion.Panel>
         </Accordion.Item>
 
