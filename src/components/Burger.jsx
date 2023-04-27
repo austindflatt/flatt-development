@@ -66,7 +66,21 @@ const BurgerMenu = () => {
               isActive ? `${classes.linkActive}` : `${classes.navlink}`}
               to="/work"
               >
-                Our Work
+                Work
+              </NavLink></li>
+              <li><NavLink
+              className={({ isActive }) =>
+              isActive ? `${classes.linkActive}` : `${classes.navlink}`}
+              to="/services"
+              >
+                Services
+              </NavLink></li>
+              <li><NavLink
+              className={({ isActive }) =>
+              isActive ? `${classes.linkActive}` : `${classes.navlink}`}
+              to="/services"
+              >
+                Process
               </NavLink></li>
               <li><NavLink
               className={({ isActive }) =>
@@ -75,33 +89,12 @@ const BurgerMenu = () => {
               >
                 About
               </NavLink></li>
-              {/* <li><NavLink
-              className={({ isActive }) =>
-              isActive ? `${classes.linkActive}` : `${classes.navlink}`}
-              to="/pricing"
-              >
-                Pricing
-              </NavLink></li> */}
               <li><NavLink
               className={({ isActive }) =>
               isActive ? `${classes.linkActive}` : `${classes.navlink}`}
-              to="/careers"
+              to="/services"
               >
-                Careers
-              </NavLink></li>
-              <li><NavLink
-              className={({ isActive }) =>
-              isActive ? `${classes.linkActive}` : `${classes.navlink}`}
-              to="/start-project"
-              >
-                Start a project
-              </NavLink></li>
-              <li><NavLink
-              className={({ isActive }) =>
-              isActive ? `${classes.linkActive}` : `${classes.navlink}`}
-              to="https://client.flattdevelopment.com"
-              >
-                Client login
+                FAQ
               </NavLink></li>
             </ul>
           </div>

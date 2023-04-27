@@ -157,44 +157,8 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const Careers = () => {
+const Process = () => {
   const { classes } = useStyles();
-
-  const values = [
-    {
-      icon: 'Bolt',
-      title: 'Async',
-      detail: 'To accommodate our team, we work and communicate asynchronously.'
-    },
-    {
-      image: 'images/',
-      title: 'Quality',
-      detail: 'From our interface design to our code, we strive to build software that will last.'
-    },
-    {
-      image: 'images/',
-      title: 'Speed',
-      detail: 'We get things done quickly, through small iteration cycles and frequent updates.'
-    },
-    {
-      image: 'images/',
-      title: 'Transparency',
-      detail: 'We are human beings that make mistakes, but through total transparency we can solve them faster.'
-    }
-  ]
-
-  const benefits = [
-    {
-      icon: 'images',
-      title: 'Competitive Salary',
-      detail: `We want the best, and will pay for the best. If you shine through we'll make sure you're paid what you're worth.`
-    },
-    {
-      icon: 'images',
-      title: 'Work From Home',
-      detail: `We're remote first and intend to keep it that way.`
-    }
-  ]
 
   return (
     <>
@@ -206,63 +170,9 @@ const Careers = () => {
     </img> */}
     <Container size="md">
       <div className={classes.wrapper}>
-        <Title className={classes.h1}>Open Positions</Title>
+        <Title className={classes.h1}>Our Process</Title>
         <div className={classes.desc}>
-          If any open positions suit you, apply now!
-        </div>
-        
-        {/* <SimpleGrid
-        cols={2}
-        style={{ gap: '1rem' }}
-        breakpoints={[
-          { maxWidth: 980, cols: 2, spacing: 'md' },
-          { maxWidth: 755, cols: 1, spacing: 'sm' },
-          { maxWidth: 600, cols: 1, spacing: 'sm' },
-        ]}
-        >
-          
-          {values.map((value, key) => {
-          return (
-          <Paper withBorder radius="md" p="xs" key="Web Development" className={classes.paper}>
-            <Group style={{ padding: '24px' }}>
-              <div className={classes.icon}><img src={value.image} loading="lazy" alt={value.title} /></div>
-              <div className={classes.detail}>
-                <Text className={classes.serviceTitle}>{value.title}</Text>
-                <Text weight={500} className={classes.serviceDescription}>
-                  {value.detail}
-                </Text>
-              </div>
-            </Group>
-          </Paper>
-          )
-          })}
-          
-        </SimpleGrid> */}
-
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
-          <a href="mailto:careers@flattdevelopment.com" style={{ textDecoration: 'none' }}>
-            <Button
-              color="dark"
-              radius="xl"
-              size="xl"
-              className={classes.control}
-              styles={(theme) => ({
-                root: {
-                  backgroundColor: '#3444da',
-                  border: '2px solid #3444da',
-                  '&:hover': {
-                    backgroundColor: '#050505',
-                    boxShadow: '0 0 4px 0 #3444da',
-                  },
-                },
-                leftIcon: {
-                  marginRight: 15,
-                },
-              })}
-              >
-                Join as an Engineer
-            </Button>
-          </a>
+          Building apps that flatten the competition.
         </div>
       </div>
     </Container>
@@ -270,4 +180,4 @@ const Careers = () => {
   )
 }
 
-export default Careers;
+export default Process;

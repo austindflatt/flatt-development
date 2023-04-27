@@ -8,10 +8,11 @@ import ScrollToTop from './components/ScrollToTop';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import About from './pages/About';
+import FaqPage from './pages/FaqPage';
 import Work from './pages/Work';
 import Pricing from './pages/Pricing';
 import NotFound from './pages/NotFound';
-import Careers from './pages/Careers';
+import Process from './pages/Process';
 import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
@@ -26,8 +27,9 @@ function App() {
             <Route path='/start-project' element={<Contact />} />
             <Route path='/work' element={<Work />} />
             <Route path='/about' element={<About />} />
+            <Route path='/faq' element={<FaqPage />} />
             <Route path='/pricing' element={<Pricing />} />
-            <Route path='/careers' element={<Careers />} />
+            <Route path='/process' element={<Process />} />
             <Route path='/privacy-policy' element={<Privacy />} />
             <Route path='/terms-conditions' element={<Terms />} />
             <Route path='/*' element={<NotFound />} />

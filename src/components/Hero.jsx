@@ -143,7 +143,7 @@ function Hero() {
       <div className={classes.root}>
         <div className={classes.wrapper}>
           <Title className={classes.title}>
-            Beautifully Developed <span className="text-gradient">Software & Apps</span>
+            Custom Developed <span className="text-gradient">Software & Apps</span>
           </Title>
           <Text className={classes.description} mt={30}>
             We are your partner for product development, including design, development, quality assurance, and launching.

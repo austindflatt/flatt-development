@@ -159,6 +159,31 @@ export default function Testimonials() {
           </div>
         </Paper>
       </Carousel.Slide>
+      <Carousel.Slide key="2" className={classes.slide}>
+        <Paper
+        radius="md"
+        className={classes.card}
+        >
+          <div className={classes.grid}>
+            {/* <div>
+              <Image
+              radius="lg"
+              src="https://www.jpmorgan.com/content/dam/jpm/commercial-banking/bankers/generic_headshot_icon_800x800.png"
+              alt="Random unsplash image"
+              width="19.25rem"
+              height="19.875rem"
+              />
+            </div> */}
+            <div>
+              <Text className={classes.description}>
+                "Incredibly talented team of developers. With great communication!"
+              </Text>
+              <Title className={classes.title}>K.B.</Title>
+              <Text className={classes.title2}>Founder, The Kicksual Network</Text>
+            </div>
+          </div>
+        </Paper>
+      </Carousel.Slide>
     </Carousel>
     </div>
     

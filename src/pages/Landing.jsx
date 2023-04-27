@@ -21,7 +21,7 @@ const Landing = () => {
     <Technologies />
     <Why />
     <Testimonials />
-    <Faqs />
+    {/* <Faqs /> */}
     <TellUs />
     </>
   )

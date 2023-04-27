@@ -1,4 +1,5 @@
-import { Container, Title, Accordion, createStyles } from '@mantine/core';
+import { Container, Title, Accordion, Button, createStyles } from '@mantine/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = createStyles((theme) => ({
 	wrapper: {
@@ -60,6 +61,19 @@ const useStyles = createStyles((theme) => ({
 		  width: '100%',
 		},
 	},
+  control: {
+    paddingLeft: 50,
+    paddingRight: 50,
+    fontFamily: `Outfit, ${theme.fontFamily}`,
+    fontSize: '1.125rem',
+    fontWeight: 400,
+    transition: 'color .25s,border-color .25s,background-color .25s',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.fn.smallerThan('md')]: {
+      width: '100%',
+    },
+  },
 }));
 
 export default function Faqs() {
@@ -163,6 +177,31 @@ export default function Faqs() {
           </Accordion.Panel>
         </Accordion.Item>
       </Accordion>
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '3.75rem auto 5rem', }}>
+        <Link to="/start-project" style={{ textDecoration: 'none' }}>
+          <Button
+          color="dark"
+          radius="xl"
+          size="xl"
+          className={classes.control}
+          styles={(theme) => ({
+            root: {
+              backgroundColor: '#3444da',
+              border: '2px solid #3444da',
+              '&:hover': {
+                backgroundColor: '#050505',
+                boxShadow: '0 0 4px 0 #3444da',
+              },
+            },
+            leftIcon: {
+              marginRight: 15,
+            },
+          })}
+          >
+            View all of our FAQs
+          </Button>
+        </Link>
+      </div>
     </Container>
     </>
   );

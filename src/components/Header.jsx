@@ -175,7 +175,21 @@ export default function HeaderMenu() {
         isActive ? `${classes.linkActive}` : `${classes.navlink}`}
         to="/work"
         >
-          Our Work
+          Work
+        </NavLink>
+        {/* <NavLink
+        className={({ isActive }) =>
+        isActive ? `${classes.linkActive}` : `${classes.navlink}`}
+        to="/services"
+        >
+          Services
+        </NavLink> */}
+        <NavLink
+        className={({ isActive }) =>
+        isActive ? `${classes.linkActive}` : `${classes.navlink}`}
+        to="/process"
+        >
+          Process
         </NavLink>
         <NavLink
         className={({ isActive }) =>
@@ -194,9 +208,9 @@ export default function HeaderMenu() {
         <NavLink
         className={({ isActive }) =>
         isActive ? `${classes.linkActive}` : `${classes.navlink}`}
-        to="/careers"
+        to="/faq"
         >
-          Careers
+          FAQ
         </NavLink>
       </Group>
       

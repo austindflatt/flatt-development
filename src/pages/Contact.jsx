@@ -134,8 +134,9 @@ const useStyles = createStyles((theme) => ({
   video: {
     borderRadius: '0.75rem',
     width: '100%',
-    height: '300px',
-    boxShadow: '0 15px 50px 0 rgb(23 25 47)',
+    height: '350px',
+    border: '4px solid #252d43',
+    // boxShadow: '0 15px 50px 0 rgb(23 25 47)',
     [theme.fn.smallerThan('sm')]: {
       height: '250px',
     },
@@ -208,7 +209,7 @@ const Contact = () => {
     alt="" 
     class={classes.heroTopRight}>
     </img>
-    <Container size="lg">
+    <Container size="xl">
       <div className={classes.wrapper}>
         <Title className={classes.h1}>Start a project with us</Title>
         <div className={classes.desc}>

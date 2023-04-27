@@ -50,11 +50,6 @@
 		"image": "images/tech/aws.png"
 	},
 	{
-		"id": 7,
-		"title": "Azure",
-		"image": "images/tech/azure.png"
-	},
-	{
 		"id": 8,
 		"title": "Figma",
 		"image": "images/tech/figma.png"
