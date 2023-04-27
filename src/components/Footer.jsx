@@ -131,7 +131,7 @@ export default function Footer() {
             <div>
               <Link to="/" style={{ textDecoration: 'none' }}>
                 <Title className={classes.title}>
-                  <img src="images/logo.png" className="logo" loading="lazy" alt="" width='214px' />
+                  <img src="images/logo-time.png" className="logo" loading="lazy" alt="" width='214px' />
                 </Title>
               </Link>
               {/* <p className={classes.footerText}>Flatt Development is a software development company created in Louisville, KY.</p> */}

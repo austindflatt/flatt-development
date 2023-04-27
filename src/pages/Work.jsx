@@ -163,7 +163,7 @@ const Work = () => {
     alt="" 
     class={classes.heroTopRight}>
     </img>
-    <Container size="lg">
+    <Container size="xl">
       <div className={classes.wrapper}>
         <Title className={classes.h1}>Our Work</Title>
         <div className={classes.desc}>

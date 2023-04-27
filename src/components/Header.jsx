@@ -150,7 +150,7 @@ export default function HeaderMenu() {
       <Container className={classes.header} size="xl">
       <Link to="/" style={{ textDecoration: 'none' }}>
         <Title className={classes.title}>
-          <img className="logo" src="images/logo.png" alt='logo' />
+          <img className="logo" src="images/logo-time.png" alt='logo' />
         </Title>
       </Link>
       
