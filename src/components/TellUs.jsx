@@ -98,7 +98,7 @@ export default function TellUs() {
             <div className={classes.content}>
               <h2 className={classes.heading}>Tell us about your amazing project</h2>
               <div className={classes.descWrap}>
-                <p class="cta-desc">We're excited to hear about it.</p>
+                <p class="cta-desc">It’s hard to find an outside agency that shares in your unique vision and drive — and has great chemistry with the talent to back it up. That’s where we come in. Let us know when you’re ready to bring your vision to life. We’re ready to be a part of your success team!</p>
               </div>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Link to="/start-project" style={{ textDecoration: 'none' }}>

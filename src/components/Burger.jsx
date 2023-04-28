@@ -71,14 +71,7 @@ const BurgerMenu = () => {
               <li><NavLink
               className={({ isActive }) =>
               isActive ? `${classes.linkActive}` : `${classes.navlink}`}
-              to="/services"
-              >
-                Services
-              </NavLink></li>
-              <li><NavLink
-              className={({ isActive }) =>
-              isActive ? `${classes.linkActive}` : `${classes.navlink}`}
-              to="/services"
+              to="/process"
               >
                 Process
               </NavLink></li>
@@ -92,7 +85,7 @@ const BurgerMenu = () => {
               <li><NavLink
               className={({ isActive }) =>
               isActive ? `${classes.linkActive}` : `${classes.navlink}`}
-              to="/services"
+              to="/faq"
               >
                 FAQ
               </NavLink></li>

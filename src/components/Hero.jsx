@@ -124,7 +124,7 @@ function Hero() {
 
   return (
     <>
-    <div className={classes.bgImages}>
+    {/* <div className={classes.bgImages}>
       <div className={classes.labHeroRight} />
       <img 
       src="images/glowtopright.svg" 
@@ -138,7 +138,7 @@ function Hero() {
       alt="" 
       class={classes.labHeroLeft}
       />
-    </div>
+    </div> */}
     <Container size="xl">
       <div className={classes.root}>
         <div className={classes.wrapper}>
