@@ -210,6 +210,9 @@ const Process = () => {
         <Title className={classes.h1} style={{ marginTop: '5.25rem', marginBottom: '1.25rem', }}>The 7 Phases of Development</Title>
 
         <div className={classes.phaseWrap}>
+          <div
+          data-aos="fade-up"
+          >
           <div className={classes.phaseGrid} style={{ opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}>
             <div className={classes.layout}>
               <div className={classes.phaseCard}>
@@ -227,6 +230,10 @@ const Process = () => {
                 </div>
               </div>
             </div>
+            </div>
+            <div
+            data-aos="fade-up"
+            >
             <div className={classes.phaseGrid} style={{ opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}>
             <div className={classes.layout}>
               <div className={classes.phaseCard}>
@@ -244,6 +251,10 @@ const Process = () => {
                 </div>
               </div>
             </div>
+            </div>
+            <div
+            data-aos="fade-up"
+            >
             <div className={classes.phaseGrid} style={{ opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}>
             <div className={classes.layout}>
               <div className={classes.phaseCard}>
@@ -261,6 +272,10 @@ const Process = () => {
                 </div>
               </div>
             </div>
+            </div>
+            <div
+            data-aos="fade-up"
+            >
             <div className={classes.phaseGrid} style={{ opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}>
             <div className={classes.layout}>
               <div className={classes.phaseCard}>
@@ -278,6 +293,10 @@ const Process = () => {
                 </div>
               </div>
             </div>
+            </div>
+            <div
+            data-aos="fade-up"
+            >
             <div className={classes.phaseGrid} style={{ opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}>
             <div className={classes.layout}>
               <div className={classes.phaseCard}>
@@ -295,6 +314,10 @@ const Process = () => {
                 </div>
               </div>
             </div>
+            </div>
+            <div
+            data-aos="fade-up"
+            >
             <div className={classes.phaseGrid} style={{ opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}>
             <div className={classes.layout}>
               <div className={classes.phaseCard}>
@@ -312,6 +335,10 @@ const Process = () => {
                 </div>
               </div>
             </div>
+            </div>
+            <div
+            data-aos="fade-up"
+            >
             <div className={classes.phaseGrid} style={{ opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}>
             <div className={classes.layout}>
               <div className={classes.phaseCard}>
@@ -328,6 +355,7 @@ const Process = () => {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
         </div>
           

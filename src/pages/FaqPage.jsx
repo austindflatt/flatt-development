@@ -106,14 +106,14 @@ const FaqPage = () => {
 
   return (
     <>
-    <div className={classes.hero}>
+    {/* <div className={classes.hero}>
     <img
     src="images/ellipse.svg" 
     loading="eager" 
     alt="" 
     class={classes.bgShape}>
     </img>
-    </div>
+    </div> */}
     <Container size="lg">
       <div className={classes.wrapper}>
       <Container size="md">
